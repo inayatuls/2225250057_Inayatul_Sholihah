@@ -1,6 +1,6 @@
-# KartesiusKu — Aplikasi Belajar Koordinat Kartesius untuk SMP
+# Kartesia — Aplikasi Belajar Koordinat Kartesius untuk SMP
 
-> Nama kerja aplikasi: **KartesiusKu** (dapat diganti).
+> Nama kerja aplikasi: **Kartesia** (dapat diganti).
 > Status: **MVP siap uji coba** · Versi: 0.1.0 · Tanggal: 10 November 2026
 > Penyusun: Inayatul Sholihah (NIM 2225250057)
 
