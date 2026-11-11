@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "m1-quad-001", "module": "M1", "type": "quadrant", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Ketuk kuadran tempat titik (−3, 5) berada.",
+    "highlights": ["(−3, 5)"],
+    "hints": ["Lihat tanda x dan y: x negatif, y positif.", "x negatif berarti di kiri sumbu Y.", "Kiri dan atas adalah kuadran II."],
+    "answer": { "quadrant": "II" },
+    "feedback": {
+      "correct": "Tepat! x negatif (kiri) dan y positif (atas) → kuadran II.",
+      "misconceptions": [{ "code": "MK-2", "match": { "quadrant": "I" }, "message": "Kuadran I untuk x positif. Di sini x = −3 (negatif)." }],
+      "generic_wrong": "Belum tepat. Cek lagi tanda x dan y."
+    },
+    "explanation": "x = −3 (kiri), y = 5 (atas) → kuadran II."
+  },
+  {
+    "slug": "m1-mc-001", "module": "M1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Titik dengan x negatif dan y negatif ada di kuadran …",
+    "options": [{ "id": "a", "text": "Kuadran I" }, { "id": "b", "text": "Kuadran II" }, { "id": "c", "text": "Kuadran III" }, { "id": "d", "text": "Kuadran IV" }],
+    "hints": ["x negatif berarti di kiri.", "y negatif berarti di bawah.", "Kiri bawah adalah kuadran III."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! (−, −) ada di kuadran III.", "generic_wrong": "Belum tepat. Kiri dan bawah ada di kuadran mana?" },
+    "explanation": "Kuadran III berisi titik (−, −)."
+  },
+  {
+    "slug": "m1-mc-002", "module": "M1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Titik asal memiliki koordinat …",
+    "options": [{ "id": "a", "text": "(1, 1)" }, { "id": "b", "text": "(0, 0)" }, { "id": "c", "text": "(1, 0)" }, { "id": "d", "text": "(0, 1)" }],
+    "hints": ["Titik asal adalah titik potong kedua sumbu.", "Di titik itu, belum ada geseran sama sekali."],
+    "answer": { "option": "b" },
+    "feedback": { "correct": "Tepat! Titik asal O(0, 0).", "generic_wrong": "Belum tepat. Titik asal belum bergeser ke mana pun." },
+    "explanation": "Titik asal O adalah perpotongan sumbu X dan sumbu Y, yaitu (0, 0)."
+  },
+  {
+    "slug": "m1-quad-002", "module": "M1", "type": "quadrant", "difficulty": 2, "objective": "TP-1",
+    "prompt": "Ketuk kuadran tempat titik (4, −2) berada.",
+    "highlights": ["(4, −2)"],
+    "hints": ["x = 4 positif, y = −2 negatif.", "Kanan dan bawah.", "Kanan bawah adalah kuadran IV."],
+    "answer": { "quadrant": "IV" },
+    "feedback": { "correct": "Tepat! (+, −) → kuadran IV.", "generic_wrong": "Belum tepat. Cek lagi tanda x dan y." },
+    "explanation": "x positif (kanan), y negatif (bawah) → kuadran IV."
+  },
+  {
+    "slug": "m1-mc-003", "module": "M1", "type": "multiple_choice", "difficulty": 2, "objective": "TP-1",
+    "literacy": { "process": "employ", "level": "knowing", "context": "personal" },
+    "prompt": "Di peta sekolah, kantin ada di (−2, −6). Kantin berada di kuadran …",
+    "highlights": ["(−2, −6)"],
+    "options": [{ "id": "a", "text": "Kuadran I" }, { "id": "b", "text": "Kuadran II" }, { "id": "c", "text": "Kuadran III" }, { "id": "d", "text": "Kuadran IV" }],
+    "hints": ["Lihat tanda kedua angka.", "Keduanya negatif."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! Kantin di kuadran III.", "generic_wrong": "Belum tepat. Kedua koordinat kantin negatif." },
+    "explanation": "(−2, −6): x negatif dan y negatif → kuadran III."
+  },
+  {
+    "slug": "m1-mc-004", "module": "M1", "type": "multiple_choice", "difficulty": 2, "objective": "TP-1",
+    "literacy": { "process": "interpret", "level": "reasoning", "context": "personal" },
+    "prompt": "Rani berkata: \"Titik (0, 5) ada di kuadran I.\" Benarkah? Mengapa?",
+    "highlights": ["(0, 5)"],
+    "options": [
+      { "id": "a", "text": "Benar, karena y positif." },
+      { "id": "b", "text": "Tidak, titik itu terletak pada sumbu Y." },
+      { "id": "c", "text": "Tidak, titik itu ada di kuadran II." }
+    ],
+    "hints": ["Perhatikan nilai x = 0.", "Titik dengan x = 0 tidak bergeser ke kanan atau kiri."],
+    "answer": { "option": "b" },
+    "feedback": { "correct": "Tepat! Titik dengan x = 0 berada pada sumbu Y, bukan di kuadran mana pun.", "generic_wrong": "Belum tepat. Perhatikan nilai x-nya." },
+    "explanation": "x = 0 berarti titik ada pada sumbu Y. Titik pada sumbu tidak termasuk kuadran mana pun."
+  },
+  {
+    "slug": "m2-plot-001", "module": "M2", "type": "plot_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Taruh titik A(4, 2) pada bidang Kartesius.",
+    "highlights": ["A(4, 2)"],
+    "canvas": { "max_points": 1 },
+    "hints": ["Mulai dari O(0, 0).", "x = 4: geser 4 langkah ke kanan.", { "text": "y = 2: lalu naik 2 langkah.", "visual": { "arrows": [{ "from": [0, 0], "to": [4, 0] }, { "from": [4, 0], "to": [4, 2] }] } }],
+    "answer": { "points": [{ "x": 4, "y": 2 }] },
+    "feedback": { "correct": "Tepat! A(4, 2): 4 ke kanan, 2 ke atas." },
+    "explanation": "Dari O: 4 langkah ke kanan, lalu 2 langkah ke atas."
+  },
+  {
+    "slug": "m2-plot-002", "module": "M2", "type": "plot_point", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Taruh titik B(−5, −1).",
+    "highlights": ["B(−5, −1)"],
+    "canvas": { "max_points": 1 },
+    "hints": ["x negatif berarti ke kiri.", "Geser 5 langkah ke kiri.", "Lalu turun 1 langkah."],
+    "answer": { "points": [{ "x": -5, "y": -1 }] },
+    "feedback": { "correct": "Tepat! B(−5, −1) ada di kuadran III." },
+    "explanation": "Dari O: 5 langkah ke kiri, lalu 1 langkah ke bawah."
+  },
+  {
+    "slug": "m2-read-001", "module": "M2", "type": "read_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Tuliskan koordinat titik P.",
+    "canvas": { "given_points": [{ "x": -3, "y": 2, "label": "P" }] },
+    "hints": ["Mulai dari O, berapa langkah mendatar ke P?", "P ada 3 langkah ke kiri, jadi x = −3.", "P ada 2 langkah ke atas."],
+    "answer": { "x": -3, "y": 2 },
+    "feedback": { "correct": "Tepat! P(−3, 2)." },
+    "explanation": "P berada 3 langkah ke kiri dan 2 langkah ke atas dari O, jadi P(−3, 2)."
+  },
+  {
+    "slug": "m2-read-002", "module": "M2", "type": "read_point", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Tuliskan koordinat titik C.",
+    "canvas": { "given_points": [{ "x": 0, "y": -4, "label": "C" }] },
+    "hints": ["C tepat berada di sumbu Y.", "Jadi C tidak bergeser mendatar: x = 0.", "C ada 4 langkah ke bawah."],
+    "answer": { "x": 0, "y": -4 },
+    "feedback": { "correct": "Tepat! C(0, −4) terletak pada sumbu Y." },
+    "explanation": "C ada di sumbu Y, 4 langkah ke bawah: C(0, −4)."
+  },
+  {
+    "slug": "m2-plot-003", "module": "M2", "type": "plot_point", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Taruh titik E(6, 0).",
+    "highlights": ["E(6, 0)"],
+    "canvas": { "max_points": 1 },
+    "hints": ["y = 0 berarti tidak naik atau turun.", "Geser 6 langkah ke kanan saja."],
+    "answer": { "points": [{ "x": 6, "y": 0 }] },
+    "feedback": { "correct": "Tepat! E(6, 0) terletak pada sumbu X." },
+    "explanation": "y = 0, jadi E berada pada sumbu X, 6 langkah ke kanan."
+  },
+  {
+    "slug": "m2-mc-001", "module": "M2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-2",
+    "literacy": { "process": "interpret", "level": "applying", "context": "personal" },
+    "prompt": "Pada peta, rumah Dimas di (2, −5). Pernyataan yang benar adalah …",
+    "highlights": ["(2, −5)"],
+    "options": [
+      { "id": "a", "text": "Rumah Dimas 2 satuan ke kanan dan 5 satuan ke bawah dari titik asal." },
+      { "id": "b", "text": "Rumah Dimas 5 satuan ke kanan dan 2 satuan ke bawah dari titik asal." },
+      { "id": "c", "text": "Rumah Dimas 2 satuan ke kiri dan 5 satuan ke atas dari titik asal." }
+    ],
+    "hints": ["Angka pertama adalah x (mendatar).", "−5 berarti ke bawah."],
+    "answer": { "option": "a" },
+    "feedback": {
+      "correct": "Tepat! (2, −5): 2 ke kanan, 5 ke bawah.",
+      "misconceptions": [
+        { "code": "MK-1", "match": { "option": "b" }, "message": "Sepertinya x dan y tertukar. Angka pertama adalah gerak mendatar." },
+        { "code": "MK-2", "match": { "option": "c" }, "message": "Perhatikan tandanya: 2 positif (kanan), −5 negatif (bawah)." }
+      ]
+    },
+    "explanation": "x = 2 → 2 ke kanan; y = −5 → 5 ke bawah."
+  }
+]

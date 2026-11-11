@@ -1,0 +1,169 @@
+[
+  {
+    "slug": "m3-num-001", "module": "M3", "type": "numeric", "difficulty": 2, "objective": "TP-3",
+    "prompt": "Berapa jarak titik P(−6, 3) ke sumbu X?",
+    "highlights": ["P(−6, 3)", "sumbu X"],
+    "canvas": { "given_points": [{ "x": -6, "y": 3, "label": "P" }] },
+    "unit": "satuan",
+    "hints": ["Jarak ke sumbu X diukur tegak (naik-turun).", "Lihat nilai y dari P.", "Jarak = |y| = |3|."],
+    "answer": { "value": 3 },
+    "feedback": {
+      "correct": "Tepat! Jarak P ke sumbu X = |3| = 3 satuan.",
+      "misconceptions": [{ "code": "MK-5", "match": { "value": 6 }, "message": "Jarak ke sumbu X diukur tegak, jadi lihat nilai y, bukan x." }]
+    },
+    "explanation": "Jarak ke sumbu X = |y| = |3| = 3 satuan."
+  },
+  {
+    "slug": "m3-num-002", "module": "M3", "type": "numeric", "difficulty": 2, "objective": "TP-3",
+    "prompt": "Berapa jarak titik Q(−7, −2) ke sumbu Y?",
+    "highlights": ["Q(−7, −2)", "sumbu Y"],
+    "canvas": { "given_points": [{ "x": -7, "y": -2, "label": "Q" }] },
+    "unit": "satuan",
+    "hints": ["Jarak ke sumbu Y diukur mendatar.", "Lihat nilai x dari Q.", "Jarak selalu positif: |−7|."],
+    "answer": { "value": 7 },
+    "feedback": {
+      "correct": "Tepat! Jarak Q ke sumbu Y = |−7| = 7 satuan.",
+      "misconceptions": [
+        { "code": "MK-5", "match": { "value": 2 }, "message": "Jarak ke sumbu Y diukur mendatar, jadi lihat nilai x." },
+        { "code": "MK-2", "match": { "value": -7 }, "message": "Jarak selalu positif. Gunakan |−7|." }
+      ]
+    },
+    "explanation": "Jarak ke sumbu Y = |x| = |−7| = 7 satuan."
+  },
+  {
+    "slug": "m3-rel-001", "module": "M3", "type": "relative_point", "difficulty": 1, "objective": "TP-4",
+    "prompt": "Titik A ada di (2, 1). Taruh titik B yang 2 satuan ke kanan dan 3 satuan ke atas dari A.",
+    "highlights": ["(2, 1)", "2 satuan ke kanan", "3 satuan ke atas"],
+    "canvas": { "given_points": [{ "x": 2, "y": 1, "label": "A" }], "max_points": 1 },
+    "hints": [
+      "Mulai dari titik A, bukan dari O(0, 0).",
+      { "text": "Geser 2 satuan ke kanan dari A.", "visual": { "arrows": [{ "from": [2, 1], "to": [4, 1] }] } },
+      { "text": "Lalu naik 3 satuan.", "visual": { "arrows": [{ "from": [2, 1], "to": [4, 1] }, { "from": [4, 1], "to": [4, 4] }] } }
+    ],
+    "answer": { "points": [{ "x": 4, "y": 4 }] },
+    "feedback": {
+      "correct": "Tepat! B(4, 4).",
+      "misconceptions": [{ "code": "MK-3", "match": { "points": [{ "x": 2, "y": 3 }] }, "message": "Kamu menghitung dari O(0, 0). Mulailah dari titik A." }]
+    },
+    "explanation": "B = (2 + 2, 1 + 3) = (4, 4)."
+  },
+  {
+    "slug": "m3-rel-002", "module": "M3", "type": "relative_point", "difficulty": 2, "objective": "TP-4",
+    "prompt": "Titik A ada di (1, −2). Tentukan titik B yang 3 satuan ke kiri dan 4 satuan ke atas dari A.",
+    "highlights": ["(1, −2)", "3 satuan ke kiri", "4 satuan ke atas"],
+    "canvas": { "given_points": [{ "x": 1, "y": -2, "label": "A" }], "max_points": 1 },
+    "hints": [
+      "Mulai dari titik A, bukan dari O(0, 0).",
+      { "text": "Geser 3 satuan ke kiri: nilai x berkurang 3.", "visual": { "arrows": [{ "from": [1, -2], "to": [-2, -2] }] } },
+      { "text": "Lalu geser 4 satuan ke atas: nilai y bertambah 4.", "visual": { "arrows": [{ "from": [1, -2], "to": [-2, -2] }, { "from": [-2, -2], "to": [-2, 2] }] } }
+    ],
+    "answer": { "points": [{ "x": -2, "y": 2 }] },
+    "feedback": {
+      "correct": "Tepat! B(−2, 2). Dari A kamu ke kiri 3 dan ke atas 4.",
+      "misconceptions": [
+        { "code": "MK-3", "match": { "points": [{ "x": -3, "y": 4 }] }, "message": "Kamu menghitung dari O(0, 0). Mulailah dari titik A." },
+        { "code": "MK-2", "match": { "points": [{ "x": 4, "y": 2 }] }, "message": "Ke kiri berarti x berkurang, bukan bertambah." }
+      ]
+    },
+    "explanation": "B = (1 − 3, −2 + 4) = (−2, 2)."
+  },
+  {
+    "slug": "m3-mc-001", "module": "M3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-4",
+    "prompt": "Posisi Q(5, 1) terhadap R(2, 4) adalah …",
+    "highlights": ["Q(5, 1)", "R(2, 4)"],
+    "options": [
+      { "id": "a", "text": "3 satuan ke kanan dan 3 satuan ke bawah" },
+      { "id": "b", "text": "3 satuan ke kiri dan 3 satuan ke atas" },
+      { "id": "c", "text": "5 satuan ke kanan dan 1 satuan ke atas" },
+      { "id": "d", "text": "3 satuan ke kanan dan 3 satuan ke atas" }
+    ],
+    "hints": ["R adalah titik acuan.", "Hitung x_Q − x_R dan y_Q − y_R.", "5 − 2 = 3 (kanan), 1 − 4 = −3 (bawah)."],
+    "answer": { "option": "a" },
+    "feedback": {
+      "correct": "Tepat! Selisihnya (3, −3).",
+      "misconceptions": [
+        { "code": "MK-3", "match": { "option": "c" }, "message": "Itu posisi Q dari O(0, 0). Gunakan R sebagai titik acuan." },
+        { "code": "MK-2", "match": { "option": "d" }, "message": "1 − 4 = −3, jadi arahnya ke bawah." }
+      ]
+    },
+    "explanation": "(5 − 2, 1 − 4) = (3, −3): 3 ke kanan, 3 ke bawah."
+  },
+  {
+    "slug": "m3-rel-003", "module": "M3", "type": "relative_point", "difficulty": 3, "objective": "TP-4",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Pos ronda ada di (−3, −2). Warung ada 5 satuan ke timur dan 6 satuan ke utara dari pos ronda. Taruh titik warung.",
+    "highlights": ["(−3, −2)", "5 satuan ke timur", "6 satuan ke utara"],
+    "canvas": { "given_points": [{ "x": -3, "y": -2, "label": "Pos" }], "max_points": 1 },
+    "hints": ["Timur = kanan, utara = atas.", "Mulai dari pos ronda (−3, −2).", "x = −3 + 5, y = −2 + 6."],
+    "answer": { "points": [{ "x": 2, "y": 4 }] },
+    "feedback": {
+      "correct": "Tepat! Warung di (2, 4).",
+      "misconceptions": [
+        { "code": "MK-3", "match": { "points": [{ "x": 5, "y": 6 }] }, "message": "Mulailah dari pos ronda, bukan dari O(0, 0)." },
+        { "code": "MK-8", "match": { "points": [{ "x": -8, "y": 4 }] }, "message": "Timur berarti ke kanan, jadi x bertambah." }
+      ]
+    },
+    "explanation": "Warung = (−3 + 5, −2 + 6) = (2, 4)."
+  },
+  {
+    "slug": "m4-line-001", "module": "M4", "type": "draw_line", "difficulty": 1, "objective": "TP-5",
+    "prompt": "Gambarlah garis melalui P(−2, 1) dan Q(3, 1). Taruh dua titik pada garis itu.",
+    "highlights": ["P(−2, 1)", "Q(3, 1)"],
+    "canvas": { "max_points": 2 },
+    "hints": ["Taruh titik P dulu.", "Lalu taruh titik Q.", "Garis akan tergambar otomatis melalui kedua titik."],
+    "answer": { "line": [{ "x": -2, "y": 1 }, { "x": 3, "y": 1 }] },
+    "feedback": { "correct": "Tepat! Garis ini sejajar sumbu X karena nilai y kedua titik sama.", "generic_wrong": "Belum tepat. Cek lagi letak kedua titik." },
+    "explanation": "P dan Q sama-sama memiliki y = 1, jadi garisnya y = 1 (sejajar sumbu X)."
+  },
+  {
+    "slug": "m4-mc-001", "module": "M4", "type": "multiple_choice", "difficulty": 2, "objective": "TP-5",
+    "prompt": "Garis melalui (3, −4) dan (3, 5). Posisi garis itu terhadap sumbu X adalah …",
+    "highlights": ["(3, −4)", "(3, 5)"],
+    "options": [
+      { "id": "a", "text": "Sejajar sumbu X" },
+      { "id": "b", "text": "Tegak lurus sumbu X" },
+      { "id": "c", "text": "Memotong sumbu X secara miring" }
+    ],
+    "hints": ["Bandingkan nilai x kedua titik.", "Nilai x sama → garis tegak."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! Nilai x sama (3), jadi garisnya tegak lurus sumbu X.",
+      "misconceptions": [{ "code": "MK-4", "match": { "option": "a" }, "message": "Garis sejajar sumbu X arahnya mendatar (y sama). Di sini yang sama adalah x." }]
+    },
+    "explanation": "x kedua titik = 3 → garis x = 3, tegak lurus sumbu X (sejajar sumbu Y)."
+  },
+  {
+    "slug": "m4-mc-002", "module": "M4", "type": "multiple_choice", "difficulty": 2, "objective": "TP-5",
+    "prompt": "Titik manakah yang terletak pada garis y = 4?",
+    "highlights": ["y = 4"],
+    "options": [{ "id": "a", "text": "(4, 1)" }, { "id": "b", "text": "(−3, 4)" }, { "id": "c", "text": "(1, −4)" }, { "id": "d", "text": "(4, −3)" }],
+    "hints": ["Pada garis y = 4, semua titik memiliki y = 4.", "Lihat angka kedua tiap pilihan."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! (−3, 4) memiliki y = 4.",
+      "misconceptions": [{ "code": "MK-1", "match": { "option": "a" }, "message": "Angka 4 di (4, 1) adalah nilai x, bukan y." }]
+    },
+    "explanation": "Titik pada garis y = 4 harus memiliki ordinat 4: (−3, 4)."
+  },
+  {
+    "slug": "m4-line-002", "module": "M4", "type": "draw_line", "difficulty": 3, "objective": "TP-5",
+    "prompt": "Gambarlah garis melalui titik K(−1, 2) yang sejajar sumbu Y.",
+    "highlights": ["K(−1, 2)", "sejajar sumbu Y"],
+    "canvas": { "given_points": [{ "x": -1, "y": 2, "label": "K" }], "max_points": 2 },
+    "hints": ["Garis sejajar sumbu Y arahnya tegak.", "Semua titiknya memiliki x yang sama dengan K.", "Taruh dua titik dengan x = −1."],
+    "answer": { "line": [{ "x": -1, "y": 2 }, { "x": -1, "y": 5 }] },
+    "feedback": { "correct": "Tepat! Garis x = −1 sejajar sumbu Y.", "generic_wrong": "Belum tepat. Garisnya harus tegak dan melalui K." },
+    "explanation": "Garis sejajar sumbu Y melalui K(−1, 2) adalah x = −1."
+  },
+  {
+    "slug": "m4-line-003", "module": "M4", "type": "draw_line", "difficulty": 2, "objective": "TP-5",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Rel kereta lurus melewati stasiun A(−5, −3) dan stasiun B(5, −3). Gambarlah rel itu.",
+    "highlights": ["A(−5, −3)", "B(5, −3)"],
+    "canvas": { "max_points": 2 },
+    "hints": ["Taruh titik stasiun A dan B.", "Nilai y kedua stasiun sama.", "Relnya adalah garis y = −3."],
+    "answer": { "line": [{ "x": -5, "y": -3 }, { "x": 5, "y": -3 }] },
+    "feedback": { "correct": "Tepat! Rel itu adalah garis y = −3, sejajar sumbu X." },
+    "explanation": "A dan B sama-sama memiliki y = −3, jadi relnya garis y = −3."
+  }
+]

@@ -1,0 +1,832 @@
+{
+  "translate_rumah_sinta": {
+    "steps": [
+      {
+        "text": "Mulai dari rumah Sinta.",
+        "expr": "(−2, 1)",
+        "canvas": {
+          "point": [
+            -2,
+            1
+          ]
+        }
+      },
+      {
+        "text": "Ke timur 5 satuan: x bertambah 5.",
+        "expr": "(−2 + 5, 1) = (3, 1)",
+        "canvas": {
+          "arrow": [
+            [
+              -2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke utara 3 satuan: y bertambah 3.",
+        "expr": "(3, 1 + 3) = (3, 4)",
+        "canvas": {
+          "arrow": [
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Posisi akhir ditemukan.",
+        "expr": "(3, 4)",
+        "canvas": {
+          "point": [
+            3,
+            4
+          ]
+        }
+      },
+      {
+        "text": "Jarak tempuh = jumlah semua langkah.",
+        "expr": "5 + 3 = 8 satuan"
+      }
+    ],
+    "describe": "P = (−2 + 5, 1 + 3); tempuh = 5 + 3 satuan"
+  },
+  "route_kurir_skala": {
+    "steps": [
+      {
+        "text": "Mulai dari gudang.",
+        "expr": "(1, −2)",
+        "canvas": {
+          "point": [
+            1,
+            -2
+          ]
+        }
+      },
+      {
+        "text": "Ke utara 4 satuan: y bertambah 4.",
+        "expr": "(1, −2 + 4) = (1, 2)",
+        "canvas": {
+          "arrow": [
+            [
+              1,
+              -2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke barat 5 satuan: x berkurang 5.",
+        "expr": "(1 − 5, 2) = (−4, 2)",
+        "canvas": {
+          "arrow": [
+            [
+              1,
+              2
+            ],
+            [
+              -4,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke selatan 1 satuan: y berkurang 1.",
+        "expr": "(−4, 2 − 1) = (−4, 1)",
+        "canvas": {
+          "arrow": [
+            [
+              -4,
+              2
+            ],
+            [
+              -4,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Posisi akhir ditemukan.",
+        "expr": "(−4, 1)",
+        "canvas": {
+          "point": [
+            -4,
+            1
+          ]
+        }
+      },
+      {
+        "text": "Jarak tempuh = jumlah semua langkah.",
+        "expr": "4 + 5 + 1 = 10 satuan"
+      },
+      {
+        "text": "Skala 1 satuan = 100 m.",
+        "expr": "10 × 100 = 1.000 m"
+      }
+    ],
+    "describe": "P = (1 − 5, −2 + 4 − 1); tempuh = 4 + 5 + 1 satuan; 1 satuan = 100 m"
+  },
+  "route_desimal_pembulatan": {
+    "steps": [
+      {
+        "text": "Mulai dari titik awal.",
+        "expr": "(0, 0)",
+        "canvas": {
+          "point": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "text": "Ke kanan 2,5 satuan: x bertambah 2,5.",
+        "expr": "(0 + 2,5, 0) = (2,5, 0)",
+        "canvas": {
+          "arrow": [
+            [
+              0,
+              0
+            ],
+            [
+              2.5,
+              0
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke bawah 1,25 satuan: y berkurang 1,25.",
+        "expr": "(2,5, 0 − 1,25) = (2,5, −1,25)",
+        "canvas": {
+          "arrow": [
+            [
+              2.5,
+              0
+            ],
+            [
+              2.5,
+              -1.25
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Posisi akhir ditemukan.",
+        "expr": "(2,5, −1,25)",
+        "canvas": {
+          "point": [
+            2.5,
+            -1.25
+          ]
+        }
+      },
+      {
+        "text": "Jarak tempuh = jumlah semua langkah.",
+        "expr": "2,5 + 1,25 = 3,75 satuan"
+      },
+      {
+        "text": "Skala 1 satuan = 1,5 km.",
+        "expr": "3,75 × 1,5 = 5,63 km"
+      }
+    ],
+    "describe": "P = (0 + 2,5, 0 − 1,25); tempuh = 2,5 + 1,25 satuan; 1 satuan = 1,5 km"
+  },
+  "axis_distance_mendatar_skala": {
+    "steps": [
+      {
+        "text": "Kedua titik memiliki nilai y yang sama, jadi jaraknya diukur mendatar.",
+        "expr": "(−3, 4) dan (5, 4)",
+        "canvas": {
+          "points": [
+            [
+              -3,
+              4
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Jarak = |x₂ − x₁|.",
+        "expr": "|5 − (−3)| = 8 satuan",
+        "canvas": {
+          "arrow": [
+            [
+              -3,
+              4
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Skala 1 satuan = 100 m.",
+        "expr": "8 × 100 = 800 m"
+      }
+    ],
+    "describe": "d = |5 − (−3)|; 1 satuan = 100 m"
+  },
+  "axis_distance_tegak": {
+    "steps": [
+      {
+        "text": "Kedua titik memiliki nilai x yang sama, jadi jaraknya diukur tegak.",
+        "expr": "(2, −3) dan (2, 6)",
+        "canvas": {
+          "points": [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Jarak = |y₂ − y₁|.",
+        "expr": "|6 − (−3)| = 9 satuan",
+        "canvas": {
+          "arrow": [
+            [
+              2,
+              -3
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        }
+      }
+    ],
+    "describe": "d = |6 − (−3)|"
+  },
+  "relative_q_dari_r": {
+    "steps": [
+      {
+        "text": "Selisih x = x_B − x_A.",
+        "expr": "5 − 2 = 3",
+        "canvas": {
+          "arrow": [
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Selisih y = y_B − y_A.",
+        "expr": "1 − 4 = −3",
+        "canvas": {
+          "arrow": [
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Artinya:",
+        "expr": "Q berada 3 satuan ke kanan (timur) dan 3 satuan ke bawah (selatan) dari R.",
+        "canvas": {
+          "points": [
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        }
+      }
+    ],
+    "describe": "(x_B − x_A, y_B − y_A) = (5 − 2, 1 − 4)"
+  },
+  "axis_line_titik_terdekat": {
+    "steps": [
+      {
+        "text": "Garis sejajar sumbu X, jadi semua titiknya memiliki nilai y yang sama.",
+        "expr": "y = 2",
+        "canvas": {
+          "hline": 2
+        }
+      },
+      {
+        "text": "Titik terdekat di garis dicapai dengan berjalan tegak lurus ke garis.",
+        "expr": "(1, 2)",
+        "canvas": {
+          "arrow": [
+            [
+              1,
+              -3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Jarak terpendek ke garis.",
+        "expr": "|2 − (−3)| = 5 satuan"
+      }
+    ],
+    "describe": "Garis: y = 2; dari (1, −3) tegak lurus ke garis"
+  },
+  "axis_line_tegak": {
+    "steps": [
+      {
+        "text": "Garis sejajar sumbu Y, jadi semua titiknya memiliki nilai x yang sama.",
+        "expr": "x = −1",
+        "canvas": {
+          "vline": -1
+        }
+      }
+    ],
+    "describe": "Garis: x = −1"
+  },
+  "rect_kebun_skala_luas": {
+    "steps": [
+      {
+        "text": "D sejajar tegak dengan A dan sejajar mendatar dengan C, jadi D = (x_A, y_C).",
+        "expr": "D = (−3, 3)",
+        "canvas": {
+          "polygon": [
+            [
+              -3,
+              -1
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              -3,
+              3
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Panjang = sisi mendatar.",
+        "expr": "|5 − (−3)| = 8 satuan"
+      },
+      {
+        "text": "Lebar = sisi tegak.",
+        "expr": "|3 − (−1)| = 4 satuan"
+      },
+      {
+        "text": "Luas = panjang × lebar.",
+        "expr": "8 × 4 = 32 satuan²"
+      },
+      {
+        "text": "Keliling = 2 × (panjang + lebar).",
+        "expr": "2 × (8 + 4) = 24 satuan"
+      },
+      {
+        "text": "Skala 1 satuan = 2 m.",
+        "expr": "panjang 8 × 2 = 16 m; lebar 4 × 2 = 8 m"
+      },
+      {
+        "text": "Luas sebenarnya = panjang × lebar sebenarnya.",
+        "expr": "16 × 8 = 128 m²"
+      },
+      {
+        "text": "Keliling sebenarnya.",
+        "expr": "24 × 2 = 48 m"
+      }
+    ],
+    "describe": "p = |5 − (−3)|; l = |3 − (−1)|; L = p × l; K = 2 × (p + l); 1 satuan = 2 m"
+  },
+  "rect_denah_desa": {
+    "steps": [
+      {
+        "text": "D sejajar tegak dengan A dan sejajar mendatar dengan C, jadi D = (x_A, y_C).",
+        "expr": "D = (−3, −2)",
+        "canvas": {
+          "polygon": [
+            [
+              -3,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              -2
+            ],
+            [
+              -3,
+              -2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Panjang = sisi mendatar.",
+        "expr": "|5 − (−3)| = 8 satuan"
+      },
+      {
+        "text": "Lebar = sisi tegak.",
+        "expr": "|−2 − 4| = 6 satuan"
+      },
+      {
+        "text": "Luas = panjang × lebar.",
+        "expr": "8 × 6 = 48 satuan²"
+      },
+      {
+        "text": "Keliling = 2 × (panjang + lebar).",
+        "expr": "2 × (8 + 6) = 28 satuan"
+      },
+      {
+        "text": "Skala 1 satuan = 100 m.",
+        "expr": "panjang 8 × 100 = 800 m; lebar 6 × 100 = 600 m"
+      },
+      {
+        "text": "Luas sebenarnya = panjang × lebar sebenarnya.",
+        "expr": "800 × 600 = 480.000 m²"
+      },
+      {
+        "text": "Keliling sebenarnya.",
+        "expr": "28 × 100 = 2.800 m"
+      }
+    ],
+    "describe": "p = |5 − (−3)|; l = |−2 − 4|; L = p × l; K = 2 × (p + l); 1 satuan = 100 m"
+  },
+  "segitiga_siku": {
+    "steps": [
+      {
+        "text": "Sudut siku-siku ada di B. Alas = sisi mendatar.",
+        "expr": "|4 − 0| = 4 satuan",
+        "canvas": {
+          "polygon": [
+            [
+              0,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Tinggi = sisi tegak.",
+        "expr": "|3 − 0| = 3 satuan"
+      },
+      {
+        "text": "Luas = ½ × alas × tinggi.",
+        "expr": "½ × 4 × 3 = 6 satuan²"
+      }
+    ],
+    "describe": "alas = |4 − 0|; tinggi = |3 − 0|; L = ½ × alas × tinggi"
+  },
+  "segitiga_tegak_dulu_skala": {
+    "steps": [
+      {
+        "text": "Sudut siku-siku ada di B. Alas = sisi mendatar.",
+        "expr": "|7 − 1| = 6 satuan",
+        "canvas": {
+          "polygon": [
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Tinggi = sisi tegak.",
+        "expr": "|1 − 5| = 4 satuan"
+      },
+      {
+        "text": "Luas = ½ × alas × tinggi.",
+        "expr": "½ × 6 × 4 = 12 satuan²"
+      },
+      {
+        "text": "Skala 1 satuan = 2 m.",
+        "expr": "alas 6 × 2 = 12 m; tinggi 4 × 2 = 8 m"
+      },
+      {
+        "text": "Luas sebenarnya = ½ × alas × tinggi sebenarnya.",
+        "expr": "½ × 12 × 8 = 48 m²"
+      }
+    ],
+    "describe": "alas = |7 − 1|; tinggi = |1 − 5|; L = ½ × alas × tinggi; 1 satuan = 2 m"
+  },
+  "pola_lampu_ke5": {
+    "steps": [
+      {
+        "text": "Titik ke-1 ada di (−6, −1).",
+        "expr": "(−6, −1)",
+        "canvas": {
+          "point": [
+            -6,
+            -1
+          ]
+        }
+      },
+      {
+        "text": "Titik ke-5 sudah bergeser (n − 1) kali.",
+        "expr": "5 − 1 = 4"
+      },
+      {
+        "text": "x = x₁ + (n − 1) × geseran x.",
+        "expr": "−6 + 4 × 3 = 6"
+      },
+      {
+        "text": "y = y₁ + (n − 1) × geseran y.",
+        "expr": "−1 + 4 × 1 = 3"
+      },
+      {
+        "text": "Titik ke-5 ada di (6, 3).",
+        "expr": "(6, 3)",
+        "canvas": {
+          "points": [
+            [
+              -6,
+              -1
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              6,
+              3
+            ]
+          ]
+        }
+      }
+    ],
+    "describe": "P_5 = (−6 + (5 − 1) × 3, −1 + (5 − 1) × 1)"
+  },
+  "pola_lampu_ke6_batas": {
+    "steps": [
+      {
+        "text": "Titik ke-1 ada di (−6, −1).",
+        "expr": "(−6, −1)",
+        "canvas": {
+          "point": [
+            -6,
+            -1
+          ]
+        }
+      },
+      {
+        "text": "Titik ke-6 sudah bergeser (n − 1) kali.",
+        "expr": "6 − 1 = 5"
+      },
+      {
+        "text": "x = x₁ + (n − 1) × geseran x.",
+        "expr": "−6 + 5 × 3 = 9"
+      },
+      {
+        "text": "y = y₁ + (n − 1) × geseran y.",
+        "expr": "−1 + 5 × 1 = 4"
+      },
+      {
+        "text": "Titik ke-6 ada di (9, 4).",
+        "expr": "(9, 4)",
+        "canvas": {
+          "points": [
+            [
+              -6,
+              -1
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              9,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Batas: x ≤ 8.",
+        "expr": "x = 9, jadi di luar batas",
+        "canvas": {
+          "vline": 8
+        }
+      }
+    ],
+    "describe": "P_6 = (−6 + (6 − 1) × 3, −1 + (6 − 1) × 1)"
+  },
+  "pola_geser_negatif": {
+    "steps": [
+      {
+        "text": "Titik ke-1 ada di (8, 2).",
+        "expr": "(8, 2)",
+        "canvas": {
+          "point": [
+            8,
+            2
+          ]
+        }
+      },
+      {
+        "text": "Titik ke-4 sudah bergeser (n − 1) kali.",
+        "expr": "4 − 1 = 3"
+      },
+      {
+        "text": "x = x₁ + (n − 1) × geseran x.",
+        "expr": "8 + 3 × (−2) = 2"
+      },
+      {
+        "text": "y = y₁ + (n − 1) × geseran y.",
+        "expr": "2 + 3 × 0 = 2"
+      },
+      {
+        "text": "Titik ke-4 ada di (2, 2).",
+        "expr": "(2, 2)",
+        "canvas": {
+          "points": [
+            [
+              8,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Batas: x ≥ 0.",
+        "expr": "x = 2, jadi masih di dalam batas",
+        "canvas": {
+          "vline": 0
+        }
+      }
+    ],
+    "describe": "P_4 = (8 + (4 − 1) × (−2), 2 + (4 − 1) × 0)"
+  },
+  "gabungan_rute_dan_skala": {
+    "steps": [
+      {
+        "text": "Mulai dari gudang.",
+        "expr": "(1, −2)",
+        "canvas": {
+          "point": [
+            1,
+            -2
+          ]
+        }
+      },
+      {
+        "text": "Ke utara 4 satuan: y bertambah 4.",
+        "expr": "(1, −2 + 4) = (1, 2)",
+        "canvas": {
+          "arrow": [
+            [
+              1,
+              -2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke barat 5 satuan: x berkurang 5.",
+        "expr": "(1 − 5, 2) = (−4, 2)",
+        "canvas": {
+          "arrow": [
+            [
+              1,
+              2
+            ],
+            [
+              -4,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Ke selatan 1 satuan: y berkurang 1.",
+        "expr": "(−4, 2 − 1) = (−4, 1)",
+        "canvas": {
+          "arrow": [
+            [
+              -4,
+              2
+            ],
+            [
+              -4,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Posisi akhir ditemukan.",
+        "expr": "(−4, 1)",
+        "canvas": {
+          "point": [
+            -4,
+            1
+          ]
+        }
+      },
+      {
+        "text": "Jarak tempuh = jumlah semua langkah.",
+        "expr": "4 + 5 + 1 = 10 satuan"
+      },
+      {
+        "text": "Skala 1 satuan = 100 m.",
+        "expr": "10 × 100 = 1.000 m"
+      }
+    ],
+    "describe": "P = (1 − 5, −2 + 4 − 1); tempuh = 4 + 5 + 1 satuan; 1 satuan = 100 m"
+  }
+}

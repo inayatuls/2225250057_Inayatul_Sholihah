@@ -1,0 +1,122 @@
+[
+  {
+    "name": "translate_rumah_sinta",
+    "model": { "kind": "translate", "start": { "x": -2, "y": 1, "label": "rumah Sinta" }, "moves": [{ "dir": "timur", "n": 5 }, { "dir": "utara", "n": 3 }] },
+    "result": { "final_position": [3, 4], "travel_distance": { "units": 8 } }
+  },
+  {
+    "name": "route_kurir_skala",
+    "model": { "kind": "route_chain", "start": { "x": 1, "y": -2, "label": "gudang" }, "moves": [{ "dir": "utara", "n": 4 }, { "dir": "barat", "n": 5 }, { "dir": "selatan", "n": 1 }], "scale": { "per_unit": 100, "unit": "m" } },
+    "result": { "final_position": [-4, 1], "travel_distance": { "units": 10, "real": 1000, "unit": "m" } }
+  },
+  {
+    "name": "route_desimal_pembulatan",
+    "model": { "kind": "route_chain", "start": { "x": 0, "y": 0 }, "moves": [{ "dir": "kanan", "n": 2.5 }, { "dir": "bawah", "n": 1.25 }], "scale": { "per_unit": 1.5, "unit": "km" } },
+    "result": { "final_position": [2.5, -1.25], "travel_distance": { "units": 3.75, "real": 5.63, "unit": "km" } }
+  },
+  {
+    "name": "axis_distance_mendatar_skala",
+    "model": { "kind": "axis_distance", "a": { "x": -3, "y": 4 }, "b": { "x": 5, "y": 4 }, "scale": { "per_unit": 100, "unit": "m" } },
+    "result": { "distance": { "units": 8, "real": 800, "unit": "m" } }
+  },
+  {
+    "name": "axis_distance_tegak",
+    "model": { "kind": "axis_distance", "a": { "x": 2, "y": -3 }, "b": { "x": 2, "y": 6 } },
+    "result": { "distance": { "units": 9 } }
+  },
+  {
+    "name": "axis_distance_tidak_segaris",
+    "model": { "kind": "axis_distance", "a": { "x": 1, "y": 1 }, "b": { "x": 2, "y": 3 } },
+    "error": "Kedua titik harus segaris mendatar atau tegak (nilai x atau y-nya sama)."
+  },
+  {
+    "name": "relative_q_dari_r",
+    "model": { "kind": "relative_position", "a": { "x": 2, "y": 4, "label": "R" }, "b": { "x": 5, "y": 1, "label": "Q" } },
+    "result": { "dx": 3, "dy": -3, "description": "Q berada 3 satuan ke kanan (timur) dan 3 satuan ke bawah (selatan) dari R." }
+  },
+  {
+    "name": "axis_line_titik_terdekat",
+    "model": { "kind": "axis_line", "through": { "x": -4, "y": 2 }, "parallel_to": "x", "from": { "x": 1, "y": -3 } },
+    "result": { "equation": "y = 2", "nearest": [1, 2], "distance": { "units": 5 } }
+  },
+  {
+    "name": "axis_line_tegak",
+    "model": { "kind": "axis_line", "through": { "x": -1, "y": 2 }, "parallel_to": "y" },
+    "result": { "equation": "x = −1" }
+  },
+  {
+    "name": "rect_kebun_skala_luas",
+    "model": { "kind": "rect_shape", "a": { "x": -3, "y": -1 }, "b": { "x": 5, "y": -1 }, "c": { "x": 5, "y": 3 }, "scale": { "per_unit": 2, "unit": "m" } },
+    "result": {
+      "missing": [-3, 3],
+      "length": { "units": 8, "real": 16, "unit": "m" },
+      "width": { "units": 4, "real": 8, "unit": "m" },
+      "area": { "units": 32, "real": 128, "unit": "m²" },
+      "perimeter": { "units": 24, "real": 48, "unit": "m" }
+    }
+  },
+  {
+    "name": "rect_denah_desa",
+    "model": { "kind": "rect_shape", "a": { "x": -3, "y": 4 }, "b": { "x": 5, "y": 4 }, "c": { "x": 5, "y": -2 }, "scale": { "per_unit": 100, "unit": "m" } },
+    "result": {
+      "missing": [-3, -2],
+      "length": { "units": 8, "real": 800, "unit": "m" },
+      "width": { "units": 6, "real": 600, "unit": "m" },
+      "area": { "units": 48, "real": 480000, "unit": "m²" },
+      "perimeter": { "units": 28, "real": 2800, "unit": "m" }
+    }
+  },
+  {
+    "name": "rect_tidak_siku",
+    "model": { "kind": "rect_shape", "a": { "x": 0, "y": 0 }, "b": { "x": 3, "y": 1 }, "c": { "x": 3, "y": 4 } },
+    "error": "Titik A, B, C harus membentuk sudut siku di B dengan sisi sejajar sumbu."
+  },
+  {
+    "name": "segitiga_siku",
+    "model": { "kind": "right_triangle", "a": { "x": 0, "y": 0 }, "b": { "x": 4, "y": 0 }, "c": { "x": 4, "y": 3 } },
+    "result": { "base": { "units": 4 }, "height": { "units": 3 }, "area": { "units": 6 } }
+  },
+  {
+    "name": "segitiga_tegak_dulu_skala",
+    "model": { "kind": "right_triangle", "a": { "x": 1, "y": 5 }, "b": { "x": 1, "y": 1 }, "c": { "x": 7, "y": 1 }, "scale": { "per_unit": 2, "unit": "m" } },
+    "result": { "base": { "units": 6, "real": 12, "unit": "m" }, "height": { "units": 4, "real": 8, "unit": "m" }, "area": { "units": 12, "real": 48, "unit": "m²" } }
+  },
+  {
+    "name": "pola_lampu_ke5",
+    "model": { "kind": "point_pattern", "first": { "x": -6, "y": -1 }, "step": { "dx": 3, "dy": 1 }, "n": 5 },
+    "result": { "point": [6, 3] }
+  },
+  {
+    "name": "pola_lampu_ke6_batas",
+    "model": { "kind": "point_pattern", "first": { "x": -6, "y": -1 }, "step": { "dx": 3, "dy": 1 }, "n": 6, "boundary": { "axis": "x", "max": 8 } },
+    "result": { "point": [9, 4], "inside": false }
+  },
+  {
+    "name": "pola_geser_negatif",
+    "model": { "kind": "point_pattern", "first": { "x": 8, "y": 2 }, "step": { "dx": -2, "dy": 0 }, "n": 4, "boundary": { "axis": "x", "min": 0 } },
+    "result": { "point": [2, 2], "inside": true }
+  },
+  {
+    "name": "gabungan_rute_dan_skala",
+    "model": { "kind": "composite", "parts": [
+      { "kind": "route_chain", "start": { "x": 1, "y": -2, "label": "gudang" }, "moves": [{ "dir": "utara", "n": 4 }, { "dir": "barat", "n": 5 }, { "dir": "selatan", "n": 1 }] },
+      { "kind": "scale", "per_unit": 100, "unit": "m" }
+    ] },
+    "result": { "final_position": [-4, 1], "travel_distance": { "units": 10, "real": 1000, "unit": "m" } }
+  },
+  {
+    "name": "skala_nol",
+    "model": { "kind": "translate", "start": { "x": 0, "y": 0 }, "moves": [{ "dir": "kanan", "n": 1 }], "scale": { "per_unit": 0, "unit": "m" } },
+    "error": "Skala harus lebih dari 0."
+  },
+  {
+    "name": "jenis_tidak_dikenal",
+    "model": { "kind": "foo" },
+    "error": "Pilih jenis model terlebih dahulu."
+  },
+  {
+    "name": "arah_kosong",
+    "model": { "kind": "route_chain", "start": { "x": 0, "y": 0 }, "moves": [{ "dir": "", "n": 2 }] },
+    "error": "Arah perpindahan ke-1 belum dipilih."
+  }
+]

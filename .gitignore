@@ -1,0 +1,23 @@
+# Rahasia
+.env
+*.jks
+*.keystore
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/*.db
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/dev-dist/
+
+# Sistem
+.DS_Store
+Thumbs.db

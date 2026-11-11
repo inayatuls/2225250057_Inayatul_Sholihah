@@ -1,0 +1,365 @@
+[
+  {
+    "slug": "m5-mod-001", "module": "M5", "type": "modeling", "difficulty": 1, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "personal" },
+    "prompt": "Rumah Sinta di (−2, 1). Sekolah berada 5 satuan ke timur dan 3 satuan ke utara dari rumah Sinta. Di mana letak sekolah?",
+    "tappables": ["Rumah Sinta", "(−2, 1)", "5 satuan ke timur", "3 satuan ke utara", "letak sekolah"],
+    "tokens_key": { "known": ["(−2, 1)", "5 satuan ke timur", "3 satuan ke utara"], "asked": ["letak sekolah"] },
+    "known_mode": "auto",
+    "model_choices": ["translate", "route_chain", "axis_distance"],
+    "model_prefill": { "kind": "translate", "start": { "x": -2, "y": 1, "label": "rumah Sinta" }, "moves": [{ "dir": "", "n": 0 }, { "dir": "", "n": 0 }] },
+    "model_key": { "kind": "translate", "start": { "x": -2, "y": 1, "label": "rumah Sinta" }, "moves": [{ "dir": "timur", "n": 5 }, { "dir": "utara", "n": 3 }] },
+    "solve_key": { "final_position": [3, 4] },
+    "answer_fields": [{ "key": "final_position", "type": "point", "label": "Koordinat sekolah" }],
+    "interpret_options": [
+      { "id": "a", "text": "Sekolah Sinta berada di titik (3, 4)." },
+      { "id": "b", "text": "Sekolah Sinta berada di titik (−7, 4)." },
+      { "id": "c", "text": "Sekolah Sinta berada di titik (4, 3)." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-8", "c": "MK-1" },
+    "check_question": "Mengapa jawaban (3, 4) masuk akal?",
+    "check_options": [
+      { "id": "a", "text": "Ke timur membuat x bertambah dan ke utara membuat y bertambah, jadi sekolah ada di kanan atas rumah." },
+      { "id": "b", "text": "Karena 5 + 3 = 8." },
+      { "id": "c", "text": "Karena sekolah selalu ada di kuadran I." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["Cari titik awal, lalu semua arah perpindahannya."],
+      "formulate": ["Sekolah ditentukan dari rumah Sinta. Pilih arah dan banyak langkahnya.", "Timur = kanan, utara = atas."],
+      "solve": ["Timur: x bertambah 5. Utara: y bertambah 3.", "x = −2 + 5, y = 1 + 3."],
+      "interpret": ["Pilih kalimat yang sesuai dengan hasil hitunganmu."],
+      "check": ["Bayangkan arah timur dan utara di peta."]
+    },
+    "explanation": "S = (−2 + 5, 1 + 3) = (3, 4)."
+  },
+  {
+    "slug": "m5-mod-002", "module": "M5", "type": "modeling", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Kurir berangkat dari gudang di (1, −2). Ia berjalan 4 satuan ke utara, 5 satuan ke barat, lalu 1 satuan ke selatan. Satu satuan = 100 m. Di mana posisi akhir kurir dan berapa jarak tempuhnya?",
+    "tappables": ["Kurir", "gudang", "(1, −2)", "4 satuan ke utara", "5 satuan ke barat", "1 satuan ke selatan", "100 m", "posisi akhir", "jarak tempuhnya"],
+    "tokens_key": { "known": ["(1, −2)", "4 satuan ke utara", "5 satuan ke barat", "1 satuan ke selatan", "100 m"], "asked": ["posisi akhir", "jarak tempuhnya"] },
+    "known_mode": "tap",
+    "model_choices": ["translate", "route_chain", "axis_distance"],
+    "model_key": { "kind": "route_chain", "start": { "x": 1, "y": -2, "label": "gudang" }, "moves": [{ "dir": "utara", "n": 4 }, { "dir": "barat", "n": 5 }, { "dir": "selatan", "n": 1 }], "scale": { "per_unit": 100, "unit": "m" } },
+    "solve_key": { "final_position": [-4, 1], "travel_distance": { "units": 10, "real": 1000, "unit": "m" } },
+    "answer_fields": [
+      { "key": "final_position", "type": "point", "label": "Posisi akhir" },
+      { "key": "travel_distance.real", "type": "number", "label": "Jarak tempuh", "unit": "m" }
+    ],
+    "interpret_options": [
+      { "id": "a", "text": "Kurir berada di (−4, 1) dan sudah berjalan 1.000 m." },
+      { "id": "b", "text": "Kurir berada di (−4, 1) dan sudah berjalan 10 m." },
+      { "id": "c", "text": "Kurir berada di (6, 1) dan sudah berjalan 1.000 m." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-12", "c": "MK-8" },
+    "check_question": "Jarak berpetak terpendek dari gudang ke posisi akhir hanya 8 satuan. Mengapa jarak tempuhnya 10 satuan?",
+    "check_options": [
+      { "id": "a", "text": "Karena kurir sempat ke selatan setelah ke utara (berbalik arah)." },
+      { "id": "b", "text": "Karena skalanya 100 m." },
+      { "id": "c", "text": "Karena posisi akhirnya di kuadran II." }
+    ],
+    "check_correct": "a", "check_mis": { "b": "MK-9" },
+    "step_hints": {
+      "understand": ["Cari titik awal, semua arah perpindahan, dan skala.", "Yang ditanyakan ada dua hal."],
+      "formulate": ["Ada beberapa perpindahan berturut-turut. Kartu model mana yang cocok?", "Utara/selatan mengubah y, timur/barat mengubah x. Jangan lupa skala."],
+      "solve": ["Jumlahkan semua perubahan x, lalu semua perubahan y.", "Jarak tempuh = 4 + 5 + 1 satuan, lalu kalikan 100 m."],
+      "interpret": ["Jarak tempuh harus dalam meter."],
+      "check": ["Bandingkan langkah ke utara dan ke selatan."]
+    },
+    "explanation": "P = (1 − 5, −2 + 4 − 1) = (−4, 1). Tempuh = (4 + 5 + 1) × 100 m = 1.000 m."
+  },
+  {
+    "slug": "m5-mod-003", "module": "M5", "type": "modeling", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "personal" },
+    "prompt": "Rumah Ayu di (−4, 3). Rumah Bima di (2, 3). Satu satuan = 50 m. Berapa jarak rumah mereka?",
+    "tappables": ["Rumah Ayu", "(−4, 3)", "Rumah Bima", "(2, 3)", "50 m", "jarak rumah mereka"],
+    "tokens_key": { "known": ["(−4, 3)", "(2, 3)", "50 m"], "asked": ["jarak rumah mereka"] },
+    "known_mode": "tap",
+    "model_choices": ["axis_distance", "relative_position", "route_chain"],
+    "model_key": { "kind": "axis_distance", "a": { "x": -4, "y": 3, "label": "rumah Ayu" }, "b": { "x": 2, "y": 3, "label": "rumah Bima" }, "scale": { "per_unit": 50, "unit": "m" } },
+    "solve_key": { "distance": { "units": 6, "real": 300, "unit": "m" } },
+    "answer_fields": [{ "key": "distance.real", "type": "number", "label": "Jarak sebenarnya", "unit": "m" }],
+    "interpret_options": [
+      { "id": "a", "text": "Jarak rumah Ayu dan rumah Bima 300 m." },
+      { "id": "b", "text": "Jarak rumah Ayu dan rumah Bima 6 m." },
+      { "id": "c", "text": "Jarak rumah Ayu dan rumah Bima 100 m." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-12", "c": "MK-11" },
+    "check_question": "Mengapa jaraknya cukup dihitung dari selisih nilai x?",
+    "check_options": [
+      { "id": "a", "text": "Karena nilai y kedua rumah sama, jadi rumah mereka segaris mendatar." },
+      { "id": "b", "text": "Karena x selalu lebih penting daripada y." },
+      { "id": "c", "text": "Karena skalanya 50 m." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["Ada dua titik dan satu skala."],
+      "formulate": ["Kedua rumah memiliki y yang sama. Model apa yang mengukur jarak mendatar?", "Jangan lupa skala 50 m."],
+      "solve": ["Jarak = |2 − (−4)| satuan.", "6 satuan × 50 m."],
+      "interpret": ["Jawaban harus dalam meter."],
+      "check": ["Lihat nilai y kedua rumah."]
+    },
+    "explanation": "d = |2 − (−4)| = 6 satuan = 6 × 50 m = 300 m."
+  },
+  {
+    "slug": "m5-mod-004", "module": "M5", "type": "modeling", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Balai desa ada di (1, 2). Pasar ada di (−3, 5). Pasar berada di mana jika dilihat dari balai desa?",
+    "tappables": ["Balai desa", "(1, 2)", "Pasar", "(−3, 5)", "Pasar berada di mana", "dilihat dari balai desa"],
+    "tokens_key": { "known": ["(1, 2)", "(−3, 5)", "dilihat dari balai desa"], "asked": ["Pasar berada di mana"] },
+    "known_mode": "tap",
+    "model_choices": ["relative_position", "translate", "axis_distance"],
+    "model_key": { "kind": "relative_position", "a": { "x": 1, "y": 2, "label": "balai desa" }, "b": { "x": -3, "y": 5, "label": "pasar" } },
+    "solve_key": { "dx": -4, "dy": 3 },
+    "answer_fields": [
+      { "key": "dx", "type": "number", "label": "Selisih x (x_pasar − x_balai)" },
+      { "key": "dy", "type": "number", "label": "Selisih y (y_pasar − y_balai)" }
+    ],
+    "interpret_options": [
+      { "id": "a", "text": "Pasar berada 4 satuan ke barat dan 3 satuan ke utara dari balai desa." },
+      { "id": "b", "text": "Pasar berada 4 satuan ke timur dan 3 satuan ke selatan dari balai desa." },
+      { "id": "c", "text": "Pasar berada 3 satuan ke barat dan 5 satuan ke utara dari balai desa." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-8", "c": "MK-3" },
+    "check_question": "Bagaimana cara memastikan jawabanmu benar?",
+    "check_options": [
+      { "id": "a", "text": "Mulai dari balai desa (1, 2), geser 4 ke kiri dan 3 ke atas. Hasilnya (−3, 5), yaitu pasar." },
+      { "id": "b", "text": "Karena pasar ada di kuadran II." },
+      { "id": "c", "text": "Karena 4 + 3 = 7." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["\"Dilihat dari\" menunjukkan titik acuan."],
+      "formulate": ["Titik acuan (A) adalah balai desa, titik yang dicari (B) adalah pasar.", "Pakai model posisi relatif."],
+      "solve": ["Selisih x = −3 − 1.", "Selisih y = 5 − 2."],
+      "interpret": ["Negatif x berarti barat, positif y berarti utara."],
+      "check": ["Coba jalankan geserannya dari balai desa."]
+    },
+    "explanation": "(−3 − 1, 5 − 2) = (−4, 3): 4 ke barat dan 3 ke utara."
+  },
+  {
+    "slug": "m5-mod-005", "module": "M5", "type": "modeling", "difficulty": 3, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "reasoning", "context": "social" },
+    "prompt": "Jalan desa lurus melewati pos ronda (−4, 2) dan masjid (6, 2). Rumah Pak Budi di (1, −3). Ia menuju jalan itu lewat jalur terpendek. Di titik mana ia tiba, dan berapa satuan jaraknya?",
+    "tappables": ["Jalan desa", "pos ronda", "(−4, 2)", "masjid", "(6, 2)", "Rumah Pak Budi", "(1, −3)", "jalur terpendek", "Di titik mana ia tiba", "berapa satuan jaraknya"],
+    "tokens_key": { "known": ["(−4, 2)", "(6, 2)", "(1, −3)", "jalur terpendek"], "asked": ["Di titik mana ia tiba", "berapa satuan jaraknya"] },
+    "known_mode": "self",
+    "model_choices": ["translate", "route_chain", "axis_distance", "relative_position", "axis_line", "rect_shape", "right_triangle", "point_pattern"],
+    "model_key": { "kind": "axis_line", "through": { "x": -4, "y": 2 }, "parallel_to": "x", "from": { "x": 1, "y": -3, "label": "rumah Pak Budi" } },
+    "solve_key": { "equation": "y = 2", "nearest": [1, 2], "distance": { "units": 5 } },
+    "answer_fields": [
+      { "key": "nearest", "type": "point", "label": "Titik tiba di jalan" },
+      { "key": "distance.units", "type": "number", "label": "Jarak", "unit": "satuan" }
+    ],
+    "interpret_options": [
+      { "id": "a", "text": "Pak Budi berjalan 5 satuan ke utara dan tiba di (1, 2)." },
+      { "id": "b", "text": "Pak Budi berjalan 5 satuan ke selatan dan tiba di (1, −8)." },
+      { "id": "c", "text": "Pak Budi tiba di (6, 2), yaitu di masjid." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-8" },
+    "check_question": "Mengapa jalur yang tegak lurus ke jalan adalah yang terpendek?",
+    "check_options": [
+      { "id": "a", "text": "Karena jalur miring atau berbelok selalu lebih panjang daripada jalur tegak lurus." },
+      { "id": "b", "text": "Karena masjid ada di (6, 2)." },
+      { "id": "c", "text": "Karena nilai x rumah Pak Budi positif." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["Jalan ditentukan oleh dua titik. Rumah Pak Budi adalah titik asal perjalanan."],
+      "formulate": ["Kedua titik jalan memiliki y yang sama. Jalan itu garis apa?", "Pakai model garis sejajar sumbu, dengan titik asal rumah Pak Budi."],
+      "solve": ["Jalan: y = 2. Berjalan tegak lurus berarti x tetap.", "Jarak = |2 − (−3)|."],
+      "interpret": ["Dari y = −3 ke y = 2 berarti naik (utara)."],
+      "check": ["Bandingkan jalur lurus ke atas dengan jalur miring."]
+    },
+    "explanation": "Jalan: y = 2. Titik terdekat (1, 2). Jarak = |2 − (−3)| = 5 satuan."
+  },
+  {
+    "slug": "m6-lit-001", "module": "M6", "stimulus": "m6-stim-desa", "type": "quadrant", "difficulty": 1, "objective": "TP-8",
+    "literacy": { "process": "employ", "level": "knowing", "context": "social" },
+    "prompt": "Ketuk kuadran tempat masjid berada.",
+    "highlights": ["masjid"],
+    "hints": ["Lihat koordinat masjid di tabel.", "Masjid di (−3, 4): x negatif, y positif."],
+    "answer": { "quadrant": "II" },
+    "feedback": { "correct": "Tepat! Masjid (−3, 4) ada di kuadran II." },
+    "explanation": "Masjid (−3, 4): kiri dan atas → kuadran II."
+  },
+  {
+    "slug": "m6-lit-002", "module": "M6", "stimulus": "m6-stim-desa", "type": "multiple_choice", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Pasar berada di mana jika dilihat dari masjid?",
+    "highlights": ["dilihat dari masjid"],
+    "options": [
+      { "id": "a", "text": "8 satuan ke timur" },
+      { "id": "b", "text": "8 satuan ke barat" },
+      { "id": "c", "text": "2 satuan ke timur" },
+      { "id": "d", "text": "8 satuan ke timur dan 4 satuan ke utara" }
+    ],
+    "hints": ["Masjid (−3, 4) adalah titik acuan.", "Hitung x_pasar − x_masjid dan y_pasar − y_masjid."],
+    "answer": { "option": "a" },
+    "feedback": {
+      "correct": "Tepat! (5 − (−3), 4 − 4) = (8, 0): 8 satuan ke timur.",
+      "misconceptions": [
+        { "code": "MK-8", "match": { "option": "b" }, "message": "Selisih x positif berarti ke timur (kanan)." },
+        { "code": "MK-11", "match": { "option": "c" }, "message": "Jarak = selisih koordinat: 5 − (−3) = 8, bukan 5 + (−3)." },
+        { "code": "MK-3", "match": { "option": "d" }, "message": "Itu posisi pasar dari balai desa. Gunakan masjid sebagai acuan." }
+      ]
+    },
+    "explanation": "Pasar − masjid = (5 − (−3), 4 − 4) = (8, 0): 8 satuan ke timur."
+  },
+  {
+    "slug": "m6-lit-003", "module": "M6", "stimulus": "m6-stim-desa", "type": "numeric", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "employ", "level": "applying", "context": "social" },
+    "prompt": "Berapa meter jarak sebenarnya dari masjid ke pasar?",
+    "highlights": ["meter"],
+    "unit": "m",
+    "hints": ["Jaraknya 8 satuan.", "Gunakan skala: 1 satuan = 100 m."],
+    "answer": { "value": 800 },
+    "feedback": {
+      "correct": "Tepat! 8 × 100 m = 800 m.",
+      "misconceptions": [{ "code": "MK-12", "match": { "value": 8 }, "message": "Itu masih dalam satuan grid. Kalikan dengan skala 100 m." }]
+    },
+    "explanation": "8 satuan × 100 m = 800 m."
+  },
+  {
+    "slug": "m6-lit-004", "module": "M6", "stimulus": "m6-stim-desa", "type": "numeric", "difficulty": 3, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "reasoning", "context": "social" },
+    "prompt": "Masjid, pasar, puskesmas, dan sekolah membentuk persegi panjang. Berapa m² luas sebenarnya?",
+    "highlights": ["persegi panjang", "m²"],
+    "unit": "m²",
+    "hints": ["Panjang = 8 satuan, lebar = 6 satuan.", "Luas = 48 satuan².", "Skala luas: 100 m × 100 m untuk setiap satuan²."],
+    "answer": { "value": 480000 },
+    "feedback": {
+      "correct": "Tepat! 48 × 100 × 100 = 480.000 m².",
+      "misconceptions": [
+        { "code": "MK-7", "match": { "value": 4800 }, "message": "Luas memakai skala dua kali: kalikan 48 dengan 100 × 100." },
+        { "code": "MK-12", "match": { "value": 48 }, "message": "48 masih dalam satuan². Ubah ke m² memakai skala." }
+      ]
+    },
+    "explanation": "p = 8, l = 6 → 48 satuan². Luas sebenarnya = 48 × 100² = 480.000 m²."
+  },
+  {
+    "slug": "m6-lit-005", "module": "M6", "stimulus": "m6-stim-desa", "type": "multiple_choice", "difficulty": 3, "objective": "TP-8",
+    "literacy": { "process": "interpret", "level": "reasoning", "context": "social" },
+    "prompt": "Dina berkata: \"Jarak terpendek dari sekolah ke pasar lewat jalan berpetak adalah 8 satuan.\" Benarkah?",
+    "options": [{ "id": "a", "text": "Benar" }, { "id": "b", "text": "Tidak benar" }],
+    "reason_options": [
+      { "id": "r1", "text": "Harus berjalan 8 satuan ke timur dan 6 satuan ke utara, jadi totalnya 14 satuan." },
+      { "id": "r2", "text": "Sekolah dan pasar sama-sama di sebelah kanan." },
+      { "id": "r3", "text": "8 satuan sama dengan 800 m." }
+    ],
+    "hints": ["Sekolah (−3, −2), pasar (5, 4).", "Jalan berpetak: jumlahkan langkah mendatar dan tegak."],
+    "answer": { "option": "b", "reason": "r1" },
+    "feedback": {
+      "correct": "Tepat! 8 + 6 = 14 satuan, bukan 8.",
+      "reason_wrong": "Jawabanmu benar, tetapi alasannya belum tepat. Hitung langkah mendatar dan tegak."
+    },
+    "explanation": "Mendatar |5 − (−3)| = 8, tegak |4 − (−2)| = 6. Total 14 satuan."
+  },
+  {
+    "slug": "m6-mod-001", "module": "M6", "type": "modeling", "difficulty": 2, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Kebun Pak Hasan berbentuk persegi panjang. Tiga titik sudutnya A(−3, −1), B(5, −1), dan C(5, 3). Satu satuan = 2 m. Tentukan titik D dan luas kebun sebenarnya.",
+    "tappables": ["Kebun Pak Hasan", "persegi panjang", "A(−3, −1)", "B(5, −1)", "C(5, 3)", "2 m", "titik D", "luas kebun sebenarnya"],
+    "tokens_key": { "known": ["persegi panjang", "A(−3, −1)", "B(5, −1)", "C(5, 3)", "2 m"], "asked": ["titik D", "luas kebun sebenarnya"] },
+    "known_mode": "tap",
+    "model_choices": ["rect_shape", "right_triangle", "axis_distance"],
+    "model_key": { "kind": "rect_shape", "a": { "x": -3, "y": -1 }, "b": { "x": 5, "y": -1 }, "c": { "x": 5, "y": 3 }, "scale": { "per_unit": 2, "unit": "m" } },
+    "solve_key": { "missing": [-3, 3], "area": { "units": 32, "real": 128, "unit": "m²" } },
+    "answer_fields": [
+      { "key": "missing", "type": "point", "label": "Titik D" },
+      { "key": "area.real", "type": "number", "label": "Luas sebenarnya", "unit": "m²" }
+    ],
+    "interpret_options": [
+      { "id": "a", "text": "Luas kebun Pak Hasan 128 m²." },
+      { "id": "b", "text": "Luas kebun Pak Hasan 64 m²." },
+      { "id": "c", "text": "Luas kebun Pak Hasan 32 m²." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-7", "c": "MK-12" },
+    "check_question": "Mengapa luas satuan² dikali 2 × 2, bukan hanya 2?",
+    "check_options": [
+      { "id": "a", "text": "Karena panjang dan lebar sama-sama dikali 2." },
+      { "id": "b", "text": "Karena kebun punya 2 sisi panjang." },
+      { "id": "c", "text": "Karena luas selalu dikali 4." }
+    ],
+    "check_correct": "a", "check_mis": { "c": "MK-7" },
+    "step_hints": {
+      "understand": ["Ada tiga titik sudut, bentuk bangun, dan skala."],
+      "formulate": ["Bangunnya persegi panjang dengan sisi sejajar sumbu.", "Isi A, B, C sesuai urutan, lalu skala 2 m."],
+      "solve": ["D = (x_A, y_C).", "p = 8 satuan = 16 m; l = 4 satuan = 8 m; L = 16 × 8."],
+      "interpret": ["Luas sebenarnya dalam m²."],
+      "check": ["Bayangkan setiap kotak satuan sebenarnya berukuran 2 m × 2 m."]
+    },
+    "explanation": "D(−3, 3). p = 8 satuan = 16 m, l = 4 satuan = 8 m. L = 16 × 8 = 128 m²."
+  },
+  {
+    "slug": "m6-mod-002", "module": "M6", "type": "modeling", "difficulty": 3, "objective": "TP-8",
+    "literacy": { "process": "formulate", "level": "reasoning", "context": "social" },
+    "prompt": "Lampu taman pertama dipasang di (−6, −1). Setiap lampu berikutnya 3 satuan ke kanan dan 1 satuan ke atas. Batas kanan taman adalah x = 8. Di mana lampu ke-6, dan apakah masih di dalam taman?",
+    "tappables": ["Lampu taman pertama", "(−6, −1)", "3 satuan ke kanan", "1 satuan ke atas", "x = 8", "lampu ke-6", "masih di dalam taman"],
+    "tokens_key": { "known": ["(−6, −1)", "3 satuan ke kanan", "1 satuan ke atas", "x = 8"], "asked": ["lampu ke-6", "masih di dalam taman"] },
+    "known_mode": "self",
+    "canvas": { "x_range": [-10, 10], "y_range": [-10, 10] },
+    "model_choices": ["translate", "route_chain", "axis_distance", "relative_position", "axis_line", "rect_shape", "right_triangle", "point_pattern"],
+    "model_key": { "kind": "point_pattern", "first": { "x": -6, "y": -1 }, "step": { "dx": 3, "dy": 1 }, "n": 6, "boundary": { "axis": "x", "max": 8 } },
+    "solve_key": { "point": [9, 4], "inside": false },
+    "answer_fields": [
+      { "key": "point", "type": "point", "label": "Letak lampu ke-6" },
+      { "key": "inside", "type": "yesno", "label": "Masih di dalam taman?" }
+    ],
+    "interpret_options": [
+      { "id": "a", "text": "Lampu ke-6 ada di (9, 4), di luar taman karena 9 > 8." },
+      { "id": "b", "text": "Lampu ke-6 ada di (12, 5), di luar taman." },
+      { "id": "c", "text": "Lampu ke-6 ada di (9, 4), masih di dalam taman." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-10" },
+    "check_question": "Mengapa lampu ke-6 bergeser 5 kali, bukan 6 kali?",
+    "check_options": [
+      { "id": "a", "text": "Karena lampu pertama belum bergeser, jadi lampu ke-6 bergeser 6 − 1 = 5 kali." },
+      { "id": "b", "text": "Karena 5 adalah bilangan ganjil." },
+      { "id": "c", "text": "Karena batas tamannya x = 8." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["Cari titik pertama, geseran tiap lampu, dan batas taman."],
+      "formulate": ["Lampu dipasang berulang dengan geseran tetap. Itu pola titik.", "n = 6, geseran (3, 1), batas x ≤ 8."],
+      "solve": ["Lampu ke-6 bergeser 5 kali.", "x = −6 + 5 × 3, y = −1 + 5 × 1."],
+      "interpret": ["Bandingkan nilai x lampu ke-6 dengan batas 8."],
+      "check": ["Hitung berapa kali lampu ke-2 bergeser dari lampu ke-1."]
+    },
+    "explanation": "P₆ = (−6 + 5 × 3, −1 + 5 × 1) = (9, 4). Karena 9 > 8, lampu ke-6 di luar taman."
+  },
+  {
+    "slug": "m6-mod-003", "module": "M6", "type": "modeling", "difficulty": 3, "objective": "TP-7",
+    "literacy": { "process": "formulate", "level": "reasoning", "context": "scientific" },
+    "prompt": "Taman berbentuk segitiga siku-siku dengan titik A(−2, 4), B(−2, −1), dan C(6, −1). Sudut sikunya di B. Satu satuan = 3 m. Berapa luas taman sebenarnya?",
+    "tappables": ["segitiga siku-siku", "A(−2, 4)", "B(−2, −1)", "C(6, −1)", "Sudut sikunya di B", "3 m", "luas taman sebenarnya"],
+    "tokens_key": { "known": ["segitiga siku-siku", "A(−2, 4)", "B(−2, −1)", "C(6, −1)", "3 m"], "asked": ["luas taman sebenarnya"] },
+    "known_mode": "self",
+    "model_choices": ["translate", "route_chain", "axis_distance", "relative_position", "axis_line", "rect_shape", "right_triangle", "point_pattern"],
+    "model_key": { "kind": "right_triangle", "a": { "x": -2, "y": 4 }, "b": { "x": -2, "y": -1 }, "c": { "x": 6, "y": -1 }, "scale": { "per_unit": 3, "unit": "m" } },
+    "solve_key": { "area": { "units": 20, "real": 180, "unit": "m²" } },
+    "answer_fields": [{ "key": "area.real", "type": "number", "label": "Luas sebenarnya", "unit": "m²" }],
+    "interpret_options": [
+      { "id": "a", "text": "Luas taman 180 m²." },
+      { "id": "b", "text": "Luas taman 60 m²." },
+      { "id": "c", "text": "Luas taman 360 m²." }
+    ],
+    "interpret_correct": "a", "interpret_mis": { "b": "MK-7" },
+    "check_question": "Mengapa luas segitiga memakai ½?",
+    "check_options": [
+      { "id": "a", "text": "Karena segitiga siku-siku adalah setengah dari persegi panjang dengan alas dan tinggi yang sama." },
+      { "id": "b", "text": "Karena skalanya 3 m." },
+      { "id": "c", "text": "Karena sudut sikunya di B." }
+    ],
+    "check_correct": "a", "check_mis": {},
+    "step_hints": {
+      "understand": ["Ada tiga titik, letak sudut siku, dan skala."],
+      "formulate": ["Pakai model segitiga siku-siku, dengan B sebagai sudut siku.", "Jangan lupa skala 3 m."],
+      "solve": ["Alas = |6 − (−2)| = 8 satuan = 24 m. Tinggi = |−1 − 4| = 5 satuan = 15 m.", "Luas = ½ × 24 × 15."],
+      "interpret": ["Luas sebenarnya dalam m²."],
+      "check": ["Gambar persegi panjang dari alas dan tinggi yang sama."]
+    },
+    "explanation": "Alas 8 satuan = 24 m, tinggi 5 satuan = 15 m. Luas = ½ × 24 × 15 = 180 m²."
+  }
+]

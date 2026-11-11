@@ -1,0 +1,160 @@
+[
+  {
+    "slug": "l2-01", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Perhatikan titik A, B, C, dan D pada bidang. Titik manakah yang berada di kuadran III?",
+    "highlights": ["kuadran III"],
+    "canvas": { "given_points": [{ "x": 2, "y": 3, "label": "A" }, { "x": -4, "y": 1, "label": "B" }, { "x": -2, "y": -5, "label": "C" }, { "x": 5, "y": -2, "label": "D" }], "hide_coords": true },
+    "options": [{ "id": "a", "text": "Titik A" }, { "id": "b", "text": "Titik B" }, { "id": "c", "text": "Titik C" }, { "id": "d", "text": "Titik D" }],
+    "hints": ["Kuadran III berisi titik dengan x negatif dan y negatif (kiri bawah)."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! C(−2, −5) ada di kiri bawah, yaitu kuadran III.", "generic_wrong": "Belum tepat. Cari titik yang berada di kiri bawah." },
+    "explanation": "A(2, 3) kuadran I, B(−4, 1) kuadran II, C(−2, −5) kuadran III, D(5, −2) kuadran IV.",
+    "solution_steps": ["Baca koordinat tiap titik: A(2, 3), B(−4, 1), C(−2, −5), D(5, −2).", "Kuadran III memuat titik (−, −): x negatif dan y negatif.", "Hanya C(−2, −5) yang kedua koordinatnya negatif."]
+  },
+  {
+    "slug": "l2-02", "module": "L2", "type": "quadrant", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Ketuk kuadran tempat titik (−6, −3) berada.",
+    "highlights": ["(−6, −3)"],
+    "hints": ["Keduanya negatif: ke kiri dan ke bawah."],
+    "answer": { "quadrant": "III" },
+    "feedback": { "correct": "Tepat! (−, −) ada di kuadran III." },
+    "explanation": "x = −6 (kiri) dan y = −3 (bawah), jadi titik berada di kuadran III.",
+    "solution_steps": ["x = −6 negatif → di kiri sumbu Y.", "y = −3 negatif → di bawah sumbu X.", "Kiri bawah adalah kuadran III."]
+  },
+  {
+    "slug": "l2-03", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Titik (7, −8) terletak di kuadran …",
+    "highlights": ["(7, −8)"],
+    "options": [{ "id": "a", "text": "Kuadran I" }, { "id": "b", "text": "Kuadran II" }, { "id": "c", "text": "Kuadran III" }, { "id": "d", "text": "Kuadran IV" }],
+    "hints": ["x positif, y negatif."],
+    "answer": { "option": "d" },
+    "feedback": { "correct": "Tepat! (+, −) ada di kuadran IV.", "generic_wrong": "Belum tepat. Cek tanda x dan y." },
+    "explanation": "x = 7 (kanan) dan y = −8 (bawah), jadi titik berada di kuadran IV.",
+    "solution_steps": ["x = 7 positif → di kanan sumbu Y.", "y = −8 negatif → di bawah sumbu X.", "Kanan bawah adalah kuadran IV."]
+  },
+  {
+    "slug": "l2-04", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-2",
+    "prompt": "Titik P(a, 5) terletak di kuadran II. Nilai a yang mungkin adalah …",
+    "highlights": ["P(a, 5)", "kuadran II"],
+    "options": [{ "id": "a", "text": "3" }, { "id": "b", "text": "0" }, { "id": "c", "text": "−2" }, { "id": "d", "text": "5" }],
+    "hints": ["Di kuadran II, nilai x selalu negatif."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! Di kuadran II, x harus negatif, jadi a = −2.", "generic_wrong": "Belum tepat. Di kuadran II, x bernilai negatif." },
+    "explanation": "Kuadran II berisi titik (−, +). Karena y = 5 sudah positif, a harus negatif. Dari pilihan, hanya −2 yang negatif.",
+    "solution_steps": ["Kuadran II berisi titik dengan x negatif dan y positif.", "y = 5 sudah positif, jadi syaratnya a < 0.", "a = 0 membuat titik berada pada sumbu Y, bukan di kuadran. Jawabannya a = −2."]
+  },
+  {
+    "slug": "l2-05", "module": "L2", "type": "numeric", "difficulty": 2, "objective": "TP-3",
+    "prompt": "Berapa jarak titik A(−3, 2) ke titik B(5, 2)?",
+    "highlights": ["A(−3, 2)", "B(5, 2)"],
+    "canvas": { "given_points": [{ "x": -3, "y": 2, "label": "A" }, { "x": 5, "y": 2, "label": "B" }] },
+    "unit": "satuan",
+    "hints": ["Nilai y kedua titik sama, jadi hitung selisih x-nya."],
+    "answer": { "value": 8 },
+    "feedback": {
+      "correct": "Tepat! |5 − (−3)| = 8 satuan.",
+      "misconceptions": [{ "code": "MK-11", "match": { "value": 2 }, "message": "Jarak = selisih koordinat x: 5 − (−3) = 8, bukan 5 + (−3)." }]
+    },
+    "explanation": "Karena y sama, jarak = |x_B − x_A| = |5 − (−3)| = 8 satuan.",
+    "solution_steps": ["A dan B sama-sama memiliki y = 2, jadi jaraknya mendatar.", "Jarak = |x_B − x_A| = |5 − (−3)|.", "|5 + 3| = 8 satuan."]
+  },
+  {
+    "slug": "l2-06", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-3",
+    "prompt": "Jarak titik K(4, −6) ke titik L(4, 3) adalah …",
+    "highlights": ["K(4, −6)", "L(4, 3)"],
+    "options": [{ "id": "a", "text": "3 satuan" }, { "id": "b", "text": "9 satuan" }, { "id": "c", "text": "8 satuan" }, { "id": "d", "text": "10 satuan" }],
+    "hints": ["Nilai x kedua titik sama, jadi hitung selisih y-nya."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! |3 − (−6)| = 9 satuan.",
+      "misconceptions": [{ "code": "MK-11", "match": { "option": "a" }, "message": "Jarak = selisih y: 3 − (−6) = 9, bukan 3 + (−6)." }]
+    },
+    "explanation": "Karena x sama, jarak = |y_L − y_K| = |3 − (−6)| = 9 satuan.",
+    "solution_steps": ["K dan L sama-sama memiliki x = 4, jadi jaraknya tegak.", "Jarak = |y_L − y_K| = |3 − (−6)|.", "|3 + 6| = 9 satuan."]
+  },
+  {
+    "slug": "l2-07", "module": "L2", "type": "numeric", "difficulty": 2, "objective": "TP-3",
+    "prompt": "Berapa jarak titik M(−5, −4) ke sumbu X?",
+    "highlights": ["M(−5, −4)", "sumbu X"],
+    "unit": "satuan",
+    "hints": ["Jarak ke sumbu X diukur tegak, jadi lihat nilai y."],
+    "answer": { "value": 4 },
+    "feedback": {
+      "correct": "Tepat! |−4| = 4 satuan.",
+      "misconceptions": [
+        { "code": "MK-5", "match": { "value": 5 }, "message": "Jarak ke sumbu X diukur tegak, jadi lihat nilai y, bukan x." },
+        { "code": "MK-2", "match": { "value": -4 }, "message": "Jarak selalu positif. Gunakan |−4|." }
+      ]
+    },
+    "explanation": "Jarak titik ke sumbu X = |y| = |−4| = 4 satuan.",
+    "solution_steps": ["Jarak ke sumbu X diukur naik-turun (tegak).", "Gunakan nilai y titik M, yaitu −4.", "Jarak selalu positif: |−4| = 4 satuan."]
+  },
+  {
+    "slug": "l2-08", "module": "L2", "type": "relative_point", "difficulty": 2, "objective": "TP-4",
+    "prompt": "Titik A ada di (−1, 2). Taruh titik B yang 4 satuan ke kanan dan 3 satuan ke bawah dari A.",
+    "highlights": ["(−1, 2)", "4 satuan ke kanan", "3 satuan ke bawah"],
+    "canvas": { "given_points": [{ "x": -1, "y": 2, "label": "A" }], "max_points": 1 },
+    "hints": ["Mulai dari A, bukan dari O."],
+    "answer": { "points": [{ "x": 3, "y": -1 }] },
+    "feedback": {
+      "correct": "Tepat! B(3, −1).",
+      "misconceptions": [{ "code": "MK-3", "match": { "points": [{ "x": 4, "y": -3 }] }, "message": "Kamu menghitung dari O(0, 0). Mulailah dari titik A." }]
+    },
+    "explanation": "B = (−1 + 4, 2 − 3) = (3, −1).",
+    "solution_steps": ["Mulai dari A(−1, 2).", "4 ke kanan: x = −1 + 4 = 3.", "3 ke bawah: y = 2 − 3 = −1. Jadi B(3, −1)."]
+  },
+  {
+    "slug": "l2-09", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-4",
+    "prompt": "Titik P(2, −1) digeser 3 satuan ke kiri, lalu 5 satuan ke atas. Koordinat titik yang baru adalah …",
+    "highlights": ["P(2, −1)", "3 satuan ke kiri", "5 satuan ke atas"],
+    "options": [{ "id": "a", "text": "(5, 4)" }, { "id": "b", "text": "(−1, 4)" }, { "id": "c", "text": "(−1, −6)" }, { "id": "d", "text": "(−3, 5)" }],
+    "hints": ["Ke kiri: x dikurangi. Ke atas: y ditambah."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! (2 − 3, −1 + 5) = (−1, 4).",
+      "misconceptions": [
+        { "code": "MK-8", "match": { "option": "a" }, "message": "Ke kiri berarti x berkurang, bukan bertambah." },
+        { "code": "MK-8", "match": { "option": "c" }, "message": "Ke atas berarti y bertambah, bukan berkurang." },
+        { "code": "MK-3", "match": { "option": "d" }, "message": "Itu geseran dari O(0, 0). Mulailah dari titik P." }
+      ]
+    },
+    "explanation": "(2 − 3, −1 + 5) = (−1, 4).",
+    "solution_steps": ["Mulai dari P(2, −1).", "3 ke kiri: x = 2 − 3 = −1.", "5 ke atas: y = −1 + 5 = 4. Titik baru (−1, 4)."]
+  },
+  {
+    "slug": "l2-10", "module": "L2", "type": "draw_line", "difficulty": 2, "objective": "TP-5",
+    "prompt": "Gambarlah garis yang melalui titik (−4, −2) dan (3, −2). Taruh dua titik pada garis itu.",
+    "highlights": ["(−4, −2)", "(3, −2)"],
+    "canvas": { "max_points": 2 },
+    "hints": ["Kedua titik memiliki y = −2."],
+    "answer": { "line": [{ "x": -4, "y": -2 }, { "x": 3, "y": -2 }] },
+    "feedback": { "correct": "Tepat! Garis y = −2 sejajar sumbu X.", "generic_wrong": "Belum tepat. Semua titik pada garis ini memiliki y = −2." },
+    "explanation": "Kedua titik memiliki y = −2, jadi garisnya y = −2 dan sejajar sumbu X.",
+    "solution_steps": ["Taruh titik (−4, −2) dan (3, −2).", "Nilai y kedua titik sama, yaitu −2.", "Garis yang terbentuk adalah y = −2, sejajar sumbu X."]
+  },
+  {
+    "slug": "l2-11", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-5",
+    "prompt": "Garis yang melalui titik (−3, 1) dan (−3, 6) adalah garis yang …",
+    "highlights": ["(−3, 1)", "(−3, 6)"],
+    "options": [{ "id": "a", "text": "Sejajar sumbu X" }, { "id": "b", "text": "Sejajar sumbu Y" }, { "id": "c", "text": "Melalui titik asal" }, { "id": "d", "text": "Memotong sumbu Y" }],
+    "hints": ["Bandingkan nilai x kedua titik."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! x kedua titik sama (−3), jadi garisnya tegak, sejajar sumbu Y.",
+      "misconceptions": [{ "code": "MK-4", "match": { "option": "a" }, "message": "Garis sejajar sumbu X arahnya mendatar (y sama). Di sini yang sama adalah x." }]
+    },
+    "explanation": "Kedua titik memiliki x = −3, jadi garisnya x = −3 yang sejajar sumbu Y dan tidak pernah memotong sumbu Y.",
+    "solution_steps": ["Bandingkan koordinat: x sama (−3), y berbeda.", "Jika x sama, garisnya tegak: x = −3.", "Garis tegak sejajar sumbu Y (dan tidak memotongnya)."]
+  },
+  {
+    "slug": "l2-12", "module": "L2", "type": "multiple_choice", "difficulty": 2, "objective": "TP-4",
+    "prompt": "A(1, 1), B(5, 1), dan C(5, 4) adalah tiga titik sudut persegi panjang ABCD. Koordinat titik D adalah …",
+    "highlights": ["A(1, 1)", "B(5, 1)", "C(5, 4)"],
+    "options": [{ "id": "a", "text": "(4, 1)" }, { "id": "b", "text": "(5, 5)" }, { "id": "c", "text": "(1, 5)" }, { "id": "d", "text": "(1, 4)" }],
+    "hints": ["D sejajar tegak dengan A dan sejajar mendatar dengan C."],
+    "answer": { "option": "d" },
+    "feedback": { "correct": "Tepat! D = (x_A, y_C) = (1, 4).", "generic_wrong": "Belum tepat. D harus memiliki x yang sama dengan A dan y yang sama dengan C." },
+    "explanation": "AB mendatar dan BC tegak, sehingga D = (x_A, y_C) = (1, 4).",
+    "solution_steps": ["AB mendatar (y = 1) dan BC tegak (x = 5).", "Sisi AD harus tegak, jadi x_D = x_A = 1.", "Sisi CD harus mendatar, jadi y_D = y_C = 4. Jadi D(1, 4)."]
+  }
+]

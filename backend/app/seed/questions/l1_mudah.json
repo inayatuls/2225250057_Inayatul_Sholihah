@@ -1,0 +1,143 @@
+[
+  {
+    "slug": "l1-01", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Garis mendatar pada bidang Kartesius disebut …",
+    "highlights": ["mendatar"],
+    "options": [{ "id": "a", "text": "Sumbu X" }, { "id": "b", "text": "Sumbu Y" }, { "id": "c", "text": "Titik asal" }, { "id": "d", "text": "Kuadran" }],
+    "hints": ["Mendatar artinya dari kiri ke kanan."],
+    "answer": { "option": "a" },
+    "feedback": { "correct": "Tepat! Garis mendatar adalah sumbu X.", "generic_wrong": "Belum tepat. Sumbu Y adalah garis tegak." },
+    "explanation": "Garis mendatar (horizontal) pada bidang Kartesius adalah sumbu X.",
+    "solution_steps": ["Bidang Kartesius dibentuk oleh dua garis bilangan yang saling tegak lurus.", "Garis yang mendatar (kiri–kanan) disebut sumbu X.", "Garis yang tegak (atas–bawah) disebut sumbu Y."]
+  },
+  {
+    "slug": "l1-02", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Garis tegak pada bidang Kartesius disebut …",
+    "highlights": ["tegak"],
+    "options": [{ "id": "a", "text": "Sumbu X" }, { "id": "b", "text": "Kuadran I" }, { "id": "c", "text": "Sumbu Y" }, { "id": "d", "text": "Titik asal" }],
+    "hints": ["Tegak artinya dari bawah ke atas."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! Garis tegak adalah sumbu Y.", "generic_wrong": "Belum tepat. Sumbu X adalah garis mendatar." },
+    "explanation": "Garis tegak (vertikal) pada bidang Kartesius adalah sumbu Y.",
+    "solution_steps": ["Ada dua sumbu pada bidang Kartesius: mendatar dan tegak.", "Sumbu mendatar = sumbu X.", "Sumbu tegak = sumbu Y."]
+  },
+  {
+    "slug": "l1-03", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Titik potong sumbu X dan sumbu Y disebut …",
+    "options": [{ "id": "a", "text": "Kuadran I" }, { "id": "b", "text": "Titik asal O(0, 0)" }, { "id": "c", "text": "Titik puncak" }, { "id": "d", "text": "Sumbu Z" }],
+    "hints": ["Di titik itu, belum ada geseran ke mana pun."],
+    "answer": { "option": "b" },
+    "feedback": { "correct": "Tepat! Titik potong kedua sumbu adalah titik asal O(0, 0).", "generic_wrong": "Belum tepat. Semua posisi dihitung dari titik ini." },
+    "explanation": "Sumbu X dan sumbu Y berpotongan di titik asal O(0, 0).",
+    "solution_steps": ["Sumbu X dan sumbu Y saling berpotongan di satu titik.", "Di titik itu x = 0 dan y = 0.", "Titik itu disebut titik asal, ditulis O(0, 0)."]
+  },
+  {
+    "slug": "l1-04", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Pada titik (5, −2), nilai absis (x) adalah …",
+    "highlights": ["(5, −2)", "absis (x)"],
+    "options": [{ "id": "a", "text": "5" }, { "id": "b", "text": "−2" }, { "id": "c", "text": "3" }, { "id": "d", "text": "7" }],
+    "hints": ["Absis adalah angka pertama pada pasangan (x, y)."],
+    "answer": { "option": "a" },
+    "feedback": {
+      "correct": "Tepat! Absis adalah angka pertama: 5.",
+      "misconceptions": [{ "code": "MK-1", "match": { "option": "b" }, "message": "−2 adalah ordinat (y). Absis adalah angka pertama." }]
+    },
+    "explanation": "Pada (x, y) = (5, −2), absisnya x = 5.",
+    "solution_steps": ["Koordinat ditulis (x, y): angka pertama x, angka kedua y.", "Absis = nilai x, ordinat = nilai y.", "Pada (5, −2), absisnya 5."]
+  },
+  {
+    "slug": "l1-05", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Pada titik (−4, 7), nilai ordinat (y) adalah …",
+    "highlights": ["(−4, 7)", "ordinat (y)"],
+    "options": [{ "id": "a", "text": "−4" }, { "id": "b", "text": "4" }, { "id": "c", "text": "−7" }, { "id": "d", "text": "7" }],
+    "hints": ["Ordinat adalah angka kedua pada pasangan (x, y)."],
+    "answer": { "option": "d" },
+    "feedback": {
+      "correct": "Tepat! Ordinat adalah angka kedua: 7.",
+      "misconceptions": [{ "code": "MK-1", "match": { "option": "a" }, "message": "−4 adalah absis (x). Ordinat adalah angka kedua." }]
+    },
+    "explanation": "Pada (x, y) = (−4, 7), ordinatnya y = 7.",
+    "solution_steps": ["Koordinat ditulis (x, y).", "Ordinat adalah nilai y, yaitu angka kedua.", "Pada (−4, 7), ordinatnya 7."]
+  },
+  {
+    "slug": "l1-06", "module": "L1", "type": "plot_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Taruh titik A(3, 4) pada bidang Kartesius.",
+    "highlights": ["A(3, 4)"],
+    "canvas": { "max_points": 1 },
+    "hints": ["Dari O, geser 3 ke kanan, lalu naik 4."],
+    "answer": { "points": [{ "x": 3, "y": 4 }] },
+    "feedback": { "correct": "Tepat! A(3, 4): 3 ke kanan, 4 ke atas." },
+    "explanation": "A(3, 4) berada 3 satuan ke kanan dan 4 satuan ke atas dari titik asal.",
+    "solution_steps": ["Mulai dari titik asal O(0, 0).", "x = 3 positif: geser 3 satuan ke kanan.", "y = 4 positif: naik 4 satuan. Itulah titik A(3, 4)."]
+  },
+  {
+    "slug": "l1-07", "module": "L1", "type": "plot_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Taruh titik B(−2, 5) pada bidang Kartesius.",
+    "highlights": ["B(−2, 5)"],
+    "canvas": { "max_points": 1 },
+    "hints": ["x negatif berarti ke kiri."],
+    "answer": { "points": [{ "x": -2, "y": 5 }] },
+    "feedback": { "correct": "Tepat! B(−2, 5): 2 ke kiri, 5 ke atas." },
+    "explanation": "B(−2, 5) berada 2 satuan ke kiri dan 5 satuan ke atas dari titik asal.",
+    "solution_steps": ["Mulai dari titik asal O(0, 0).", "x = −2 negatif: geser 2 satuan ke kiri.", "y = 5 positif: naik 5 satuan. Itulah titik B(−2, 5)."]
+  },
+  {
+    "slug": "l1-08", "module": "L1", "type": "read_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Tuliskan koordinat titik P.",
+    "canvas": { "given_points": [{ "x": 4, "y": -3, "label": "P" }] },
+    "hints": ["Hitung dulu langkah mendatar dari O ke P, lalu langkah tegaknya."],
+    "answer": { "x": 4, "y": -3 },
+    "feedback": { "correct": "Tepat! P(4, −3)." },
+    "explanation": "P berada 4 satuan ke kanan dan 3 satuan ke bawah dari O, jadi P(4, −3).",
+    "solution_steps": ["Dari O, hitung langkah mendatar ke P: 4 ke kanan, jadi x = 4.", "Hitung langkah tegak: 3 ke bawah, jadi y = −3.", "Koordinat P = (4, −3)."]
+  },
+  {
+    "slug": "l1-09", "module": "L1", "type": "read_point", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Tuliskan koordinat titik Q.",
+    "canvas": { "given_points": [{ "x": -5, "y": -1, "label": "Q" }] },
+    "hints": ["Ke kiri dan ke bawah bernilai negatif."],
+    "answer": { "x": -5, "y": -1 },
+    "feedback": { "correct": "Tepat! Q(−5, −1)." },
+    "explanation": "Q berada 5 satuan ke kiri dan 1 satuan ke bawah dari O, jadi Q(−5, −1).",
+    "solution_steps": ["Dari O ke Q: 5 langkah ke kiri, jadi x = −5.", "Lalu 1 langkah ke bawah, jadi y = −1.", "Koordinat Q = (−5, −1)."]
+  },
+  {
+    "slug": "l1-10", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-2",
+    "prompt": "Perhatikan titik R pada bidang. Koordinat titik R adalah …",
+    "canvas": { "given_points": [{ "x": -3, "y": 2, "label": "R" }], "hide_coords": true },
+    "options": [{ "id": "a", "text": "(2, −3)" }, { "id": "b", "text": "(3, 2)" }, { "id": "c", "text": "(−3, 2)" }, { "id": "d", "text": "(−2, 3)" }],
+    "hints": ["Baca langkah mendatar dulu (x), baru langkah tegak (y)."],
+    "answer": { "option": "c" },
+    "feedback": {
+      "correct": "Tepat! R(−3, 2).",
+      "misconceptions": [
+        { "code": "MK-1", "match": { "option": "d" }, "message": "Sepertinya x dan y tertukar. Mendatar dulu, baru tegak." },
+        { "code": "MK-2", "match": { "option": "b" }, "message": "R ada di kiri sumbu Y, jadi x-nya negatif." }
+      ]
+    },
+    "explanation": "R berada 3 satuan ke kiri dan 2 satuan ke atas dari O, jadi R(−3, 2).",
+    "solution_steps": ["Dari O ke R: 3 langkah ke kiri, jadi x = −3.", "Lalu 2 langkah ke atas, jadi y = 2.", "Koordinat R = (−3, 2)."]
+  },
+  {
+    "slug": "l1-11", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Titik (0, 6) terletak pada …",
+    "highlights": ["(0, 6)"],
+    "options": [{ "id": "a", "text": "Sumbu X" }, { "id": "b", "text": "Sumbu Y" }, { "id": "c", "text": "Kuadran I" }, { "id": "d", "text": "Titik asal" }],
+    "hints": ["x = 0 berarti tidak bergeser ke kanan atau ke kiri."],
+    "answer": { "option": "b" },
+    "feedback": { "correct": "Tepat! Titik dengan x = 0 terletak pada sumbu Y.", "generic_wrong": "Belum tepat. Perhatikan bahwa x = 0." },
+    "explanation": "Karena x = 0, titik (0, 6) tidak bergeser mendatar, jadi terletak pada sumbu Y.",
+    "solution_steps": ["Lihat nilai x: x = 0.", "Titik dengan x = 0 tidak bergeser ke kanan/kiri, jadi berada di garis tegak sumbu Y.", "Titik pada sumbu tidak termasuk kuadran mana pun."]
+  },
+  {
+    "slug": "l1-12", "module": "L1", "type": "multiple_choice", "difficulty": 1, "objective": "TP-1",
+    "prompt": "Titik (−7, 0) terletak pada …",
+    "highlights": ["(−7, 0)"],
+    "options": [{ "id": "a", "text": "Sumbu X" }, { "id": "b", "text": "Sumbu Y" }, { "id": "c", "text": "Kuadran II" }, { "id": "d", "text": "Kuadran III" }],
+    "hints": ["y = 0 berarti tidak naik atau turun."],
+    "answer": { "option": "a" },
+    "feedback": { "correct": "Tepat! Titik dengan y = 0 terletak pada sumbu X.", "generic_wrong": "Belum tepat. Perhatikan bahwa y = 0." },
+    "explanation": "Karena y = 0, titik (−7, 0) tidak naik atau turun, jadi terletak pada sumbu X.",
+    "solution_steps": ["Lihat nilai y: y = 0.", "Titik dengan y = 0 tidak bergeser tegak, jadi berada di garis mendatar sumbu X.", "Titik ini 7 satuan di kiri titik asal, tepat pada sumbu X."]
+  }
+]

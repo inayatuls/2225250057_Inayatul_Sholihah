@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "m6-stim-desa",
+    "module": "M6",
+    "title": "Denah Desa Sukamaju",
+    "context": "social",
+    "content": {
+      "description": "Denah ini menunjukkan letak tempat penting di Desa Sukamaju. Balai desa menjadi titik asal.",
+      "scale": { "per_unit": 100, "unit": "m" },
+      "places": [
+        { "label": "Balai desa", "x": 0, "y": 0 },
+        { "label": "Masjid", "x": -3, "y": 4 },
+        { "label": "Pasar", "x": 5, "y": 4 },
+        { "label": "Puskesmas", "x": 5, "y": -2 },
+        { "label": "Sekolah", "x": -3, "y": -2 }
+      ]
+    }
+  }
+]

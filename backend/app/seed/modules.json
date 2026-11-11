@@ -1,0 +1,1014 @@
+[
+  {
+    "code": "M1",
+    "title": "Bidang Kartesius",
+    "subtitle": "Sumbu, titik asal, dan empat kuadran",
+    "order_index": 1,
+    "objective_codes": "TP-1",
+    "minutes": 15,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Denah Tempat Duduk",
+        "body": "Kamu ingin memberi tahu letak kursimu di kelas. Kamu bisa bilang: baris ke-3, kursi ke-2. Bidang Kartesius bekerja dengan cara yang mirip!"
+      },
+      {
+        "kind": "concept",
+        "title": "Dua Sumbu",
+        "body": "Garis mendatar disebut **sumbu X** (biru). Garis tegak disebut **sumbu Y** (merah). Keduanya berpotongan tegak lurus.",
+        "display": {}
+      },
+      {
+        "kind": "concept",
+        "title": "Titik Asal",
+        "body": "Titik potong kedua sumbu disebut **titik asal** O(0, 0). Semua posisi dihitung dari titik ini.",
+        "display": {
+          "points": [
+            {
+              "x": 0,
+              "y": 0,
+              "label": "O"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Arah Positif dan Negatif",
+        "body": "Ke kanan dan ke atas bernilai **positif**. Ke kiri dan ke bawah bernilai **negatif**.",
+        "display": {
+          "arrows": [
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                4,
+                0
+              ]
+            },
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                -4,
+                0
+              ]
+            },
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                4
+              ]
+            },
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                -4
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": "worked",
+        "title": "Empat Kuadran",
+        "body": "Kedua sumbu membagi bidang menjadi empat daerah yang disebut **kuadran**.",
+        "worked_steps": [
+          {
+            "text": "Kuadran I: x positif, y positif (+, +).",
+            "display": {
+              "quadrant": "I"
+            }
+          },
+          {
+            "text": "Kuadran II: x negatif, y positif (−, +).",
+            "display": {
+              "quadrant": "II"
+            }
+          },
+          {
+            "text": "Kuadran III: x negatif, y negatif (−, −).",
+            "display": {
+              "quadrant": "III"
+            }
+          },
+          {
+            "text": "Kuadran IV: x positif, y negatif (+, −).",
+            "display": {
+              "quadrant": "IV"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "faded",
+        "title": "Coba Sendiri",
+        "body": "Ketuk daerah tempat x dan y sama-sama negatif.",
+        "interaction": {
+          "type": "tap_quadrant",
+          "target": "III",
+          "success": "Tepat! Itu kuadran III (−, −)."
+        }
+      },
+      {
+        "kind": "reflection",
+        "title": "Apa yang Kamu Pelajari?",
+        "body": "Bidang Kartesius punya sumbu X, sumbu Y, titik asal, dan empat kuadran. Berikutnya, kamu akan berlatih soal."
+      }
+    ]
+  },
+  {
+    "code": "M2",
+    "title": "Koordinat Titik",
+    "subtitle": "Menaruh dan membaca titik (x, y)",
+    "order_index": 2,
+    "objective_codes": "TP-2",
+    "minutes": 20,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Mencari Harta Karun",
+        "body": "Peta harta karun menulis (3, 2). Artinya: jalan 3 langkah ke kanan, lalu 2 langkah ke atas."
+      },
+      {
+        "kind": "concept",
+        "title": "Pasangan Berurutan (x, y)",
+        "body": "Koordinat ditulis (x, y). Nilai x disebut **absis**, nilai y disebut **ordinat**. Urutannya tidak boleh tertukar!",
+        "display": {
+          "points": [
+            {
+              "x": 3,
+              "y": 2,
+              "label": "A"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Mendatar Dulu, Baru Tegak",
+        "body": "Mulai dari O. Geser **mendatar** sejauh x, lalu geser **tegak** sejauh y.",
+        "display": {
+          "arrows": [
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                3,
+                0
+              ]
+            },
+            {
+              "from": [
+                3,
+                0
+              ],
+              "to": [
+                3,
+                2
+              ]
+            }
+          ],
+          "points": [
+            {
+              "x": 3,
+              "y": 2,
+              "label": "A"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "worked",
+        "title": "Contoh: Titik B(−4, 3)",
+        "body": "Ikuti langkahnya satu per satu.",
+        "worked_steps": [
+          {
+            "text": "Mulai dari O(0, 0).",
+            "display": {
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "label": "O"
+                }
+              ]
+            }
+          },
+          {
+            "text": "x = −4: geser 4 langkah ke kiri.",
+            "display": {
+              "arrows": [
+                {
+                  "from": [
+                    0,
+                    0
+                  ],
+                  "to": [
+                    -4,
+                    0
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "y = 3: naik 3 langkah.",
+            "display": {
+              "arrows": [
+                {
+                  "from": [
+                    0,
+                    0
+                  ],
+                  "to": [
+                    -4,
+                    0
+                  ]
+                },
+                {
+                  "from": [
+                    -4,
+                    0
+                  ],
+                  "to": [
+                    -4,
+                    3
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "Titik B(−4, 3) ada di kuadran II.",
+            "display": {
+              "points": [
+                {
+                  "x": -4,
+                  "y": 3,
+                  "label": "B"
+                }
+              ],
+              "quadrant": "II"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "faded",
+        "title": "Lanjutkan Langkahnya",
+        "body": "Langkah mendatar sudah digambar. Taruh titik C(2, −3).",
+        "display": {
+          "arrows": [
+            {
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                2,
+                0
+              ]
+            }
+          ]
+        },
+        "interaction": {
+          "type": "place_point",
+          "target": {
+            "x": 2,
+            "y": -3
+          },
+          "success": "Hebat! C(2, −3): 2 ke kanan, lalu 3 ke bawah."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Titik pada Sumbu",
+        "body": "Jika x = 0, titik ada di **sumbu Y**. Jika y = 0, titik ada di **sumbu X**.",
+        "display": {
+          "points": [
+            {
+              "x": 0,
+              "y": -4,
+              "label": "D"
+            },
+            {
+              "x": 5,
+              "y": 0,
+              "label": "E"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "reflection",
+        "title": "Apa yang Kamu Pelajari?",
+        "body": "Koordinat (x, y) dibaca mendatar dulu, baru tegak. Ayo berlatih!"
+      }
+    ]
+  },
+  {
+    "code": "M3",
+    "title": "Posisi Titik",
+    "subtitle": "Jarak ke sumbu dan titik acuan",
+    "order_index": 3,
+    "objective_codes": "TP-3, TP-4",
+    "minutes": 20,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Di Mana Rumah Temanmu?",
+        "body": "Rina berkata: \"Rumahku 3 rumah ke kanan dan 2 ke atas dari rumahmu.\" Rina memakai rumahmu sebagai **titik acuan**."
+      },
+      {
+        "kind": "concept",
+        "title": "Jarak ke Sumbu",
+        "body": "Jarak titik ke sumbu X sama dengan |y|. Jarak titik ke sumbu Y sama dengan |x|.",
+        "display": {
+          "points": [
+            {
+              "x": -3,
+              "y": 4,
+              "label": "P"
+            }
+          ],
+          "arrows": [
+            {
+              "from": [
+                -3,
+                4
+              ],
+              "to": [
+                -3,
+                0
+              ]
+            },
+            {
+              "from": [
+                -3,
+                4
+              ],
+              "to": [
+                0,
+                4
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Titik Acuan",
+        "body": "Posisi titik bisa dihitung dari titik lain, bukan hanya dari O. Titik itu disebut **titik acuan**.",
+        "display": {
+          "points": [
+            {
+              "x": 1,
+              "y": 1,
+              "label": "A"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "worked",
+        "title": "Contoh: B dari A(1, 1)",
+        "body": "B ada 3 satuan ke kanan dan 2 satuan ke atas dari A(1, 1).",
+        "worked_steps": [
+          {
+            "text": "Mulai dari A(1, 1), bukan dari O.",
+            "display": {
+              "points": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "label": "A"
+                }
+              ]
+            }
+          },
+          {
+            "text": "3 ke kanan: x = 1 + 3 = 4.",
+            "display": {
+              "points": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "label": "A"
+                }
+              ],
+              "arrows": [
+                {
+                  "from": [
+                    1,
+                    1
+                  ],
+                  "to": [
+                    4,
+                    1
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "2 ke atas: y = 1 + 2 = 3.",
+            "display": {
+              "points": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "label": "A"
+                }
+              ],
+              "arrows": [
+                {
+                  "from": [
+                    1,
+                    1
+                  ],
+                  "to": [
+                    4,
+                    1
+                  ]
+                },
+                {
+                  "from": [
+                    4,
+                    1
+                  ],
+                  "to": [
+                    4,
+                    3
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "Jadi B(4, 3).",
+            "display": {
+              "points": [
+                {
+                  "x": 1,
+                  "y": 1,
+                  "label": "A"
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "label": "B"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "kind": "faded",
+        "title": "Lanjutkan Langkahnya",
+        "body": "Dari A(−2, 1), titik C ada 4 satuan ke kanan dan 3 satuan ke bawah. Langkah mendatar sudah digambar. Taruh titik C.",
+        "display": {
+          "points": [
+            {
+              "x": -2,
+              "y": 1,
+              "label": "A"
+            }
+          ],
+          "arrows": [
+            {
+              "from": [
+                -2,
+                1
+              ],
+              "to": [
+                2,
+                1
+              ]
+            }
+          ]
+        },
+        "interaction": {
+          "type": "place_point",
+          "target": {
+            "x": 2,
+            "y": -2
+          },
+          "success": "Tepat! C(2, −2)."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Posisi Relatif",
+        "body": "Posisi B dari A = (x_B − x_A, y_B − y_A). Positif berarti kanan/atas. Negatif berarti kiri/bawah."
+      },
+      {
+        "kind": "reflection",
+        "title": "Apa yang Kamu Pelajari?",
+        "body": "Selalu mulai dari titik acuan. Jarak ke sumbu X dilihat dari y, ke sumbu Y dari x."
+      }
+    ]
+  },
+  {
+    "code": "M4",
+    "title": "Posisi Garis",
+    "subtitle": "Garis melalui titik, sejajar dan tegak lurus sumbu",
+    "order_index": 4,
+    "objective_codes": "TP-5",
+    "minutes": 20,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Jalan Lurus",
+        "body": "Jalan di depan sekolahmu lurus. Di peta, jalan itu digambar sebagai garis yang melalui dua titik."
+      },
+      {
+        "kind": "concept",
+        "title": "Dua Titik, Satu Garis",
+        "body": "Melalui dua titik yang berbeda, hanya ada **satu** garis lurus.",
+        "display": {
+          "points": [
+            {
+              "x": -3,
+              "y": -2,
+              "label": "P"
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "label": "Q"
+            }
+          ],
+          "lines": [
+            {
+              "a": [
+                -3,
+                -2
+              ],
+              "b": [
+                4,
+                3
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": "worked",
+        "title": "Contoh: Garis melalui P(−2, 1) dan Q(3, 1)",
+        "body": "Perhatikan nilai y kedua titik.",
+        "worked_steps": [
+          {
+            "text": "Taruh P(−2, 1).",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "P"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Taruh Q(3, 1).",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "P"
+                },
+                {
+                  "x": 3,
+                  "y": 1,
+                  "label": "Q"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Tarik garis lurus melalui P dan Q.",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "P"
+                },
+                {
+                  "x": 3,
+                  "y": 1,
+                  "label": "Q"
+                }
+              ],
+              "lines": [
+                {
+                  "a": [
+                    -2,
+                    1
+                  ],
+                  "b": [
+                    3,
+                    1
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "Nilai y keduanya sama (1), jadi garis **sejajar sumbu X**.",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "P"
+                },
+                {
+                  "x": 3,
+                  "y": 1,
+                  "label": "Q"
+                }
+              ],
+              "hline": 1
+            }
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Sejajar Sumbu Y",
+        "body": "Jika nilai x semua titik sama, garis **sejajar sumbu Y**. Garis itu **tegak lurus** terhadap sumbu X.",
+        "display": {
+          "points": [
+            {
+              "x": 2,
+              "y": -3
+            },
+            {
+              "x": 2,
+              "y": 4
+            }
+          ],
+          "vline": 2
+        }
+      },
+      {
+        "kind": "faded",
+        "title": "Coba Sendiri",
+        "body": "Titik A(−4, 2) sudah ada. Taruh satu titik lain agar garisnya sejajar sumbu X.",
+        "display": {
+          "points": [
+            {
+              "x": -4,
+              "y": 2,
+              "label": "A"
+            }
+          ]
+        },
+        "interaction": {
+          "type": "place_point",
+          "accept": {
+            "y": 2,
+            "not": [
+              -4,
+              2
+            ]
+          },
+          "line_from": [
+            -4,
+            2
+          ],
+          "success": "Benar! Semua titik dengan y = 2 membentuk garis sejajar sumbu X."
+        }
+      },
+      {
+        "kind": "concept",
+        "title": "Garis yang Memotong Sumbu",
+        "body": "Garis yang tidak sejajar sumbu akan **memotong** sumbu X dan sumbu Y.",
+        "display": {
+          "lines": [
+            {
+              "a": [
+                -3,
+                -2
+              ],
+              "b": [
+                4,
+                3
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": "reflection",
+        "title": "Apa yang Kamu Pelajari?",
+        "body": "y sama → sejajar sumbu X. x sama → sejajar sumbu Y. Selain itu, garis memotong kedua sumbu."
+      }
+    ]
+  },
+  {
+    "code": "M5",
+    "title": "Soal Cerita & Pemodelan",
+    "subtitle": "Ubah cerita menjadi model matematika",
+    "order_index": 5,
+    "objective_codes": "TP-6, TP-7, TP-8",
+    "minutes": 25,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Cerita Jadi Matematika",
+        "body": "Soal cerita terasa panjang? Tenang. Kita pecah menjadi 5 langkah kecil."
+      },
+      {
+        "kind": "concept",
+        "title": "5 Langkah Pemodelan",
+        "body": "🔍 **Pahami** → 🧩 **Rumuskan** → ✏️ **Selesaikan** → 💬 **Tafsirkan** → ✅ **Periksa**. Kamu akan selalu melihat urutan ini."
+      },
+      {
+        "kind": "worked",
+        "title": "Contoh: Sekolah Sinta",
+        "body": "Rumah Sinta di (−2, 1). Sekolah 5 satuan ke timur dan 3 satuan ke utara dari rumah.",
+        "worked_steps": [
+          {
+            "text": "🔍 Pahami — Diketahui: rumah (−2, 1), 5 ke timur, 3 ke utara. Ditanya: letak sekolah.",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "Rumah"
+                }
+              ]
+            }
+          },
+          {
+            "text": "🧩 Rumuskan — Model titik acuan: S = (−2 + 5, 1 + 3).",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "Rumah"
+                }
+              ],
+              "arrows": [
+                {
+                  "from": [
+                    -2,
+                    1
+                  ],
+                  "to": [
+                    3,
+                    1
+                  ]
+                },
+                {
+                  "from": [
+                    3,
+                    1
+                  ],
+                  "to": [
+                    3,
+                    4
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "text": "✏️ Selesaikan — S = (3, 4).",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "Rumah"
+                },
+                {
+                  "x": 3,
+                  "y": 4,
+                  "label": "Sekolah"
+                }
+              ]
+            }
+          },
+          {
+            "text": "💬 Tafsirkan — Sekolah Sinta ada di titik (3, 4).",
+            "display": {
+              "points": [
+                {
+                  "x": 3,
+                  "y": 4,
+                  "label": "Sekolah"
+                }
+              ]
+            }
+          },
+          {
+            "text": "✅ Periksa — Timur membuat x bertambah, utara membuat y bertambah. Sekolah di kanan atas rumah. Masuk akal!",
+            "display": {
+              "points": [
+                {
+                  "x": -2,
+                  "y": 1,
+                  "label": "Rumah"
+                },
+                {
+                  "x": 3,
+                  "y": 4,
+                  "label": "Sekolah"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Arah Mata Angin",
+        "body": "**Timur** = kanan (+x), **barat** = kiri (−x). **Utara** = atas (+y), **selatan** = bawah (−y)."
+      },
+      {
+        "kind": "concept",
+        "title": "Kartu Model",
+        "body": "Setiap cerita cocok dengan satu **kartu model**. Kamu bisa membuka semua kartu di menu Pemodel."
+      },
+      {
+        "kind": "reflection",
+        "title": "Siap Mencoba?",
+        "body": "Di latihan berikut, kerjakan soal cerita langkah demi langkah. Jangan ragu memakai petunjuk."
+      }
+    ]
+  },
+  {
+    "code": "M6",
+    "title": "Tantangan Literasi",
+    "subtitle": "Denah, skala, bangun datar, dan pola",
+    "order_index": 6,
+    "objective_codes": "TP-7, TP-8",
+    "minutes": 30,
+    "segments": [
+      {
+        "kind": "hook",
+        "title": "Membaca Denah Desa",
+        "body": "Denah dan peta penuh informasi. Kamu perlu memilih informasi yang penting saja."
+      },
+      {
+        "kind": "concept",
+        "title": "Skala",
+        "body": "Skala 1 satuan = 100 m artinya 1 kotak di denah sama dengan 100 m sebenarnya. Jarak sebenarnya = banyak satuan × skala."
+      },
+      {
+        "kind": "concept",
+        "title": "Skala untuk Luas",
+        "body": "Panjang dan lebar sama-sama dikali skala. Jadi luas dikali **skala × skala**.",
+        "display": {
+          "polygon": [
+            [
+              -3,
+              -1
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              -3,
+              3
+            ]
+          ]
+        }
+      },
+      {
+        "kind": "worked",
+        "title": "Contoh: Pola Lampu",
+        "body": "Lampu pertama di (−6, −1). Setiap lampu berikutnya 3 ke kanan dan 1 ke atas.",
+        "worked_steps": [
+          {
+            "text": "Lampu ke-1 di (−6, −1).",
+            "display": {
+              "points": [
+                {
+                  "x": -6,
+                  "y": -1,
+                  "label": "1"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Lampu ke-2 bergeser 1 kali: (−3, 0).",
+            "display": {
+              "points": [
+                {
+                  "x": -6,
+                  "y": -1,
+                  "label": "1"
+                },
+                {
+                  "x": -3,
+                  "y": 0,
+                  "label": "2"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Lampu ke-5 bergeser 4 kali: (−6 + 4 × 3, −1 + 4 × 1) = (6, 3).",
+            "display": {
+              "points": [
+                {
+                  "x": -6,
+                  "y": -1,
+                  "label": "1"
+                },
+                {
+                  "x": -3,
+                  "y": 0,
+                  "label": "2"
+                },
+                {
+                  "x": 0,
+                  "y": 1,
+                  "label": "3"
+                },
+                {
+                  "x": 3,
+                  "y": 2,
+                  "label": "4"
+                },
+                {
+                  "x": 6,
+                  "y": 3,
+                  "label": "5"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "kind": "concept",
+        "title": "Bernalar",
+        "body": "Soal literasi sering bertanya \"Benarkah?\" atau \"Mengapa?\". Jawab dengan alasan dari data."
+      },
+      {
+        "kind": "reflection",
+        "title": "Ayo Tantang Dirimu!",
+        "body": "Kerjakan soal denah desa dan soal pemodelan berikut. Pakai Kartu Model bila perlu."
+      }
+    ]
+  },
+  {
+    "code": "L1",
+    "kind": "practice",
+    "title": "Latihan Mudah",
+    "subtitle": "Sumbu, letak titik, dan membaca koordinat",
+    "order_index": 101,
+    "objective_codes": "TP-1, TP-2",
+    "minutes": 15,
+    "segments": []
+  },
+  {
+    "code": "L2",
+    "kind": "practice",
+    "title": "Latihan Sedang",
+    "subtitle": "Kuadran, geseran titik, dan jarak sederhana",
+    "order_index": 102,
+    "objective_codes": "TP-2, TP-3, TP-4, TP-5",
+    "minutes": 20,
+    "segments": []
+  },
+  {
+    "code": "L3",
+    "kind": "practice",
+    "title": "Latihan Sulit",
+    "subtitle": "Soal cerita, analisis, dan penalaran",
+    "order_index": 103,
+    "objective_codes": "TP-4, TP-5, TP-6, TP-8",
+    "minutes": 25,
+    "segments": []
+  }
+]

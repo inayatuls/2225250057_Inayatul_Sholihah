@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "l3-01", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-6",
+    "literacy": { "process": "formulate", "level": "applying", "context": "personal" },
+    "prompt": "Di peta, sekolah berada di (2, 3). Rumah Dodi berada 6 satuan ke barat dan 4 satuan ke selatan dari sekolah. Koordinat rumah Dodi adalah …",
+    "highlights": ["(2, 3)", "6 satuan ke barat", "4 satuan ke selatan"],
+    "options": [{ "id": "a", "text": "(8, −1)" }, { "id": "b", "text": "(−4, −1)" }, { "id": "c", "text": "(−4, 7)" }, { "id": "d", "text": "(−6, −4)" }],
+    "hints": ["Barat = kiri (x berkurang), selatan = bawah (y berkurang)."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! (2 − 6, 3 − 4) = (−4, −1).",
+      "misconceptions": [
+        { "code": "MK-8", "match": { "option": "a" }, "message": "Barat berarti ke kiri, jadi x berkurang." },
+        { "code": "MK-8", "match": { "option": "c" }, "message": "Selatan berarti ke bawah, jadi y berkurang." },
+        { "code": "MK-3", "match": { "option": "d" }, "message": "Mulailah dari sekolah, bukan dari titik asal." }
+      ]
+    },
+    "explanation": "Rumah Dodi = (2 − 6, 3 − 4) = (−4, −1).",
+    "solution_steps": ["Diketahui: sekolah (2, 3); geser 6 ke barat dan 4 ke selatan.", "Barat = kiri: x = 2 − 6 = −4.", "Selatan = bawah: y = 3 − 4 = −1.", "Jadi rumah Dodi di (−4, −1)."]
+  },
+  {
+    "slug": "l3-02", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-6",
+    "literacy": { "process": "employ", "level": "applying", "context": "social" },
+    "prompt": "Pada denah sekolah, 1 satuan = 50 m. Perpustakaan di (−3, 2) dan kantin di (5, 2). Jarak sebenarnya perpustakaan ke kantin adalah …",
+    "highlights": ["1 satuan = 50 m", "(−3, 2)", "(5, 2)"],
+    "options": [{ "id": "a", "text": "8 m" }, { "id": "b", "text": "100 m" }, { "id": "c", "text": "400 m" }, { "id": "d", "text": "4.000 m" }],
+    "hints": ["Hitung jarak dalam satuan dulu, lalu kalikan dengan 50 m."],
+    "answer": { "option": "c" },
+    "feedback": {
+      "correct": "Tepat! 8 satuan × 50 m = 400 m.",
+      "misconceptions": [
+        { "code": "MK-12", "match": { "option": "a" }, "message": "8 masih dalam satuan denah. Kalikan dengan skala 50 m." },
+        { "code": "MK-11", "match": { "option": "b" }, "message": "Jarak = 5 − (−3) = 8 satuan, bukan 5 + (−3) = 2 satuan." }
+      ]
+    },
+    "explanation": "Jarak = |5 − (−3)| = 8 satuan = 8 × 50 m = 400 m.",
+    "solution_steps": ["Kedua tempat memiliki y = 2, jadi jaraknya mendatar.", "Jarak pada denah = |5 − (−3)| = 8 satuan.", "Jarak sebenarnya = 8 × 50 m = 400 m."]
+  },
+  {
+    "slug": "l3-03", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-5",
+    "prompt": "Diketahui titik A(−2, 4), B(3, 4), dan C(3, −1). Pernyataan yang benar adalah …",
+    "highlights": ["A(−2, 4)", "B(3, 4)", "C(3, −1)"],
+    "options": [
+      { "id": "a", "text": "Garis AB sejajar sumbu Y" },
+      { "id": "b", "text": "Ketiga titik terletak di kuadran yang sama" },
+      { "id": "c", "text": "Garis AB sejajar sumbu X dan garis BC sejajar sumbu Y" },
+      { "id": "d", "text": "Titik C terletak di kuadran I" }
+    ],
+    "hints": ["Bandingkan y untuk A dan B, lalu x untuk B dan C."],
+    "answer": { "option": "c" },
+    "feedback": { "correct": "Tepat! AB: y sama → sejajar sumbu X. BC: x sama → sejajar sumbu Y.", "generic_wrong": "Belum tepat. Periksa satu per satu setiap pernyataan." },
+    "explanation": "A dan B memiliki y = 4 (AB sejajar sumbu X). B dan C memiliki x = 3 (BC sejajar sumbu Y). A di kuadran II, B di kuadran I, C di kuadran IV.",
+    "solution_steps": ["A(−2, 4) dan B(3, 4): y sama, jadi AB sejajar sumbu X (pilihan a salah).", "B(3, 4) dan C(3, −1): x sama, jadi BC sejajar sumbu Y.", "Kuadran: A di II, B di I, C(3, −1) di IV, jadi pilihan b dan d salah.", "Pernyataan yang benar: AB sejajar sumbu X dan BC sejajar sumbu Y."]
+  },
+  {
+    "slug": "l3-04", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-4",
+    "literacy": { "process": "interpret", "level": "reasoning", "context": "scientific" },
+    "prompt": "Titik P(x, y) berada di kuadran II. Di kuadran manakah titik Q(−x, y)?",
+    "highlights": ["P(x, y)", "kuadran II", "Q(−x, y)"],
+    "options": [{ "id": "a", "text": "Kuadran I" }, { "id": "b", "text": "Kuadran II" }, { "id": "c", "text": "Kuadran III" }, { "id": "d", "text": "Kuadran IV" }],
+    "hints": ["Di kuadran II, x negatif. Apa tanda −x jika x negatif?"],
+    "answer": { "option": "a" },
+    "feedback": { "correct": "Tepat! −x menjadi positif dan y tetap positif, jadi Q di kuadran I.", "generic_wrong": "Belum tepat. Tentukan dulu tanda x dan y untuk titik P." },
+    "explanation": "P di kuadran II berarti x < 0 dan y > 0. Maka −x > 0 dan y > 0, sehingga Q di kuadran I.",
+    "solution_steps": ["P di kuadran II: x negatif dan y positif.", "Jika x negatif, −x positif (contoh: x = −3, maka −x = 3).", "Q(−x, y) memiliki koordinat (+, +), jadi Q berada di kuadran I."]
+  },
+  {
+    "slug": "l3-05", "module": "L3", "type": "numeric", "difficulty": 3, "objective": "TP-6",
+    "literacy": { "process": "employ", "level": "applying", "context": "scientific" },
+    "prompt": "Robot mulai di (−2, −3). Robot bergerak 5 satuan ke timur, 6 satuan ke utara, lalu 2 satuan ke barat. Berapa total jarak tempuh robot?",
+    "highlights": ["(−2, −3)", "5 satuan ke timur", "6 satuan ke utara", "2 satuan ke barat"],
+    "unit": "satuan",
+    "hints": ["Jarak tempuh = jumlah semua langkah yang dijalani."],
+    "answer": { "value": 13 },
+    "feedback": {
+      "correct": "Tepat! 5 + 6 + 2 = 13 satuan.",
+      "misconceptions": [{ "code": "MK-9", "match": { "value": 9 }, "message": "Jarak tempuh menjumlahkan semua langkah, termasuk saat berbalik ke barat." }]
+    },
+    "explanation": "Jarak tempuh = 5 + 6 + 2 = 13 satuan. (Posisi akhir robot (1, 3), tetapi yang ditanyakan jarak tempuh.)",
+    "solution_steps": ["Catat setiap langkah: 5 (timur), 6 (utara), 2 (barat).", "Jarak tempuh = jumlah semua langkah = 5 + 6 + 2.", "Total = 13 satuan. Posisi akhirnya (−2 + 5 − 2, −3 + 6) = (1, 3)."]
+  },
+  {
+    "slug": "l3-06", "module": "L3", "type": "relative_point", "difficulty": 3, "objective": "TP-4",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Pos A berada di (−3, 1). Pos B berada 5 satuan ke timur dan 2 satuan ke selatan dari Pos A. Taruh titik Pos B.",
+    "highlights": ["(−3, 1)", "5 satuan ke timur", "2 satuan ke selatan"],
+    "canvas": { "given_points": [{ "x": -3, "y": 1, "label": "Pos A" }], "max_points": 1 },
+    "hints": ["Timur = kanan, selatan = bawah. Mulai dari Pos A."],
+    "answer": { "points": [{ "x": 2, "y": -1 }] },
+    "feedback": {
+      "correct": "Tepat! Pos B di (2, −1).",
+      "misconceptions": [
+        { "code": "MK-3", "match": { "points": [{ "x": 5, "y": -2 }] }, "message": "Mulailah dari Pos A, bukan dari titik asal." },
+        { "code": "MK-8", "match": { "points": [{ "x": -8, "y": -1 }] }, "message": "Timur berarti ke kanan, jadi x bertambah." }
+      ]
+    },
+    "explanation": "Pos B = (−3 + 5, 1 − 2) = (2, −1).",
+    "solution_steps": ["Mulai dari Pos A(−3, 1).", "5 ke timur (kanan): x = −3 + 5 = 2.", "2 ke selatan (bawah): y = 1 − 2 = −1. Pos B di (2, −1)."]
+  },
+  {
+    "slug": "l3-07", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-6",
+    "prompt": "Persegi panjang PQRS memiliki titik P(−2, −1), Q(4, −1), dan R(4, 3). Luas persegi panjang PQRS adalah …",
+    "highlights": ["P(−2, −1)", "Q(4, −1)", "R(4, 3)", "Luas"],
+    "options": [{ "id": "a", "text": "20 satuan²" }, { "id": "b", "text": "10 satuan²" }, { "id": "c", "text": "24 satuan²" }, { "id": "d", "text": "12 satuan²" }],
+    "hints": ["Panjang = |x_Q − x_P|, lebar = |y_R − y_Q|."],
+    "answer": { "option": "c" },
+    "feedback": {
+      "correct": "Tepat! 6 × 4 = 24 satuan².",
+      "misconceptions": [{ "code": "MK-11", "match": { "option": "a" }, "message": "20 adalah keliling: 2 × (6 + 4). Yang ditanya luas: 6 × 4." }]
+    },
+    "explanation": "Panjang PQ = |4 − (−2)| = 6, lebar QR = |3 − (−1)| = 4, luas = 6 × 4 = 24 satuan².",
+    "solution_steps": ["Panjang PQ (mendatar) = |4 − (−2)| = 6 satuan.", "Lebar QR (tegak) = |3 − (−1)| = 4 satuan.", "Luas = panjang × lebar = 6 × 4 = 24 satuan²."]
+  },
+  {
+    "slug": "l3-08", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-8",
+    "literacy": { "process": "interpret", "level": "reasoning", "context": "personal" },
+    "prompt": "Andi berkata: \"Titik (−3, 5) dan (5, −3) terletak di kuadran yang sama.\" Benarkah?",
+    "highlights": ["(−3, 5)", "(5, −3)"],
+    "options": [{ "id": "a", "text": "Benar" }, { "id": "b", "text": "Tidak benar" }],
+    "reason_options": [
+      { "id": "r1", "text": "(−3, 5) di kuadran II, sedangkan (5, −3) di kuadran IV." },
+      { "id": "r2", "text": "Angkanya sama, hanya urutannya tertukar." },
+      { "id": "r3", "text": "Keduanya terletak pada sumbu Y." }
+    ],
+    "hints": ["Tentukan kuadran masing-masing titik dari tanda x dan y."],
+    "answer": { "option": "b", "reason": "r1" },
+    "feedback": { "correct": "Tepat! Urutan (x, y) menentukan letak titik.", "reason_wrong": "Jawabanmu benar, tetapi alasannya belum tepat. Tentukan kuadran tiap titik." },
+    "explanation": "(−3, 5) berada di kuadran II (−, +), sedangkan (5, −3) berada di kuadran IV (+, −). Jadi pernyataan Andi tidak benar.",
+    "solution_steps": ["(−3, 5): x negatif, y positif → kuadran II.", "(5, −3): x positif, y negatif → kuadran IV.", "Kuadrannya berbeda, jadi pernyataan Andi tidak benar."]
+  },
+  {
+    "slug": "l3-09", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-4",
+    "prompt": "Titik A(1, 2) dan B(1, −4). Titik tengah ruas garis AB adalah …",
+    "highlights": ["A(1, 2)", "B(1, −4)", "Titik tengah"],
+    "options": [{ "id": "a", "text": "(1, 3)" }, { "id": "b", "text": "(1, −2)" }, { "id": "c", "text": "(0, −1)" }, { "id": "d", "text": "(1, −1)" }],
+    "hints": ["Hitung jarak AB, lalu bagi dua dan geser dari A."],
+    "answer": { "option": "d" },
+    "feedback": { "correct": "Tepat! Titik tengahnya (1, −1).", "generic_wrong": "Belum tepat. Hitung dulu panjang AB, lalu ambil setengahnya." },
+    "explanation": "AB tegak dengan panjang |−4 − 2| = 6 satuan. Setengahnya 3 satuan; dari A(1, 2) turun 3 satuan menjadi (1, −1).",
+    "solution_steps": ["A dan B memiliki x = 1, jadi AB tegak dan titik tengahnya juga memiliki x = 1.", "Panjang AB = |−4 − 2| = 6 satuan, setengahnya 3 satuan.", "Dari A(1, 2) turun 3 satuan: y = 2 − 3 = −1. Titik tengah (1, −1)."]
+  },
+  {
+    "slug": "l3-10", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-6",
+    "literacy": { "process": "formulate", "level": "reasoning", "context": "social" },
+    "prompt": "Pohon pertama ditanam di (−5, 2). Setiap pohon berikutnya ditanam 2 satuan ke kanan dari pohon sebelumnya. Koordinat pohon ke-6 adalah …",
+    "highlights": ["(−5, 2)", "2 satuan ke kanan", "pohon ke-6"],
+    "options": [{ "id": "a", "text": "(7, 2)" }, { "id": "b", "text": "(5, 2)" }, { "id": "c", "text": "(3, 2)" }, { "id": "d", "text": "(−5, 12)" }],
+    "hints": ["Pohon pertama belum bergeser. Pohon ke-6 bergeser berapa kali?"],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! Pohon ke-6 bergeser 5 kali: −5 + 5 × 2 = 5.",
+      "misconceptions": [{ "code": "MK-10", "match": { "option": "a" }, "message": "Pohon pertama belum bergeser, jadi pohon ke-6 bergeser (6 − 1) = 5 kali." }]
+    },
+    "explanation": "Pohon ke-6 bergeser 6 − 1 = 5 kali ke kanan: x = −5 + 5 × 2 = 5, y tetap 2. Jadi (5, 2).",
+    "solution_steps": ["Pohon ke-1 di (−5, 2) dan belum bergeser.", "Pohon ke-6 bergeser (6 − 1) = 5 kali, masing-masing 2 satuan ke kanan.", "x = −5 + 5 × 2 = 5; y tetap 2. Pohon ke-6 di (5, 2)."]
+  },
+  {
+    "slug": "l3-11", "module": "L3", "type": "draw_line", "difficulty": 3, "objective": "TP-5",
+    "literacy": { "process": "formulate", "level": "applying", "context": "social" },
+    "prompt": "Pagar lurus dipasang sejajar sumbu Y dan melewati tiang di (2, −3). Gambarlah garis pagar itu.",
+    "highlights": ["sejajar sumbu Y", "(2, −3)"],
+    "canvas": { "given_points": [{ "x": 2, "y": -3, "label": "Tiang" }], "max_points": 2 },
+    "hints": ["Garis sejajar sumbu Y itu tegak: semua titiknya memiliki x yang sama dengan tiang."],
+    "answer": { "line": [{ "x": 2, "y": -3 }, { "x": 2, "y": 4 }] },
+    "feedback": { "correct": "Tepat! Garis pagar adalah x = 2.", "generic_wrong": "Belum tepat. Garisnya harus tegak dan melalui tiang (2, −3)." },
+    "explanation": "Garis sejajar sumbu Y yang melalui (2, −3) adalah garis tegak x = 2.",
+    "solution_steps": ["Sejajar sumbu Y berarti garisnya tegak.", "Semua titik pada garis tegak memiliki x yang sama dengan tiang, yaitu x = 2.", "Taruh dua titik dengan x = 2, misalnya (2, −3) dan (2, 4)."]
+  },
+  {
+    "slug": "l3-12", "module": "L3", "type": "multiple_choice", "difficulty": 3, "objective": "TP-6",
+    "prompt": "Titik A(−4, 3), B(2, 3), dan C(2, −2) adalah titik sudut persegi panjang ABCD. Titik D dan keliling ABCD adalah …",
+    "highlights": ["A(−4, 3)", "B(2, 3)", "C(2, −2)", "keliling"],
+    "options": [
+      { "id": "a", "text": "D(−4, −2), keliling 30 satuan" },
+      { "id": "b", "text": "D(−4, −2), keliling 22 satuan" },
+      { "id": "c", "text": "D(−2, −4), keliling 22 satuan" },
+      { "id": "d", "text": "D(2, 3), keliling 11 satuan" }
+    ],
+    "hints": ["D = (x_A, y_C). Keliling = 2 × (panjang + lebar)."],
+    "answer": { "option": "b" },
+    "feedback": {
+      "correct": "Tepat! D(−4, −2) dan keliling 2 × (6 + 5) = 22 satuan.",
+      "misconceptions": [
+        { "code": "MK-11", "match": { "option": "a" }, "message": "30 adalah luas (6 × 5). Keliling = 2 × (6 + 5)." },
+        { "code": "MK-1", "match": { "option": "c" }, "message": "Koordinat D tertukar. D = (x_A, y_C) = (−4, −2)." }
+      ]
+    },
+    "explanation": "D = (x_A, y_C) = (−4, −2). Panjang AB = |2 − (−4)| = 6, lebar BC = |−2 − 3| = 5, keliling = 2 × (6 + 5) = 22 satuan.",
+    "solution_steps": ["AB mendatar dan BC tegak, jadi D = (x_A, y_C) = (−4, −2).", "Panjang AB = |2 − (−4)| = 6 satuan; lebar BC = |−2 − 3| = 5 satuan.", "Keliling = 2 × (6 + 5) = 22 satuan."]
+  }
+]
